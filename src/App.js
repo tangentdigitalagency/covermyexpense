@@ -6,7 +6,7 @@ import 'antd/dist/antd.css';
 import './App.css';
 import Grid from '@material-ui/core/Grid';
 // @ts-ignore
-import Logo from './Assets/logoq.png';
+import Logo from './Assets/cme.png';
 // @ts-ignore
 import { Button, Typography, Progress } from 'antd';
 import { PhoneOutlined } from '@ant-design/icons';
@@ -116,7 +116,7 @@ class App extends Component {
 					<div className='container'>
 						<img
 							// @ts-ignore
-							src={require('./Assets/logo.png')}
+							src={require('./Assets/cme.png')}
 							className='m-4'
 							width='200px'
 							alt=''
@@ -293,7 +293,17 @@ class App extends Component {
 								object-fit='fit'
 								alt='missing'
 								// @ts-ignore
-								src={require('./Assets/1.png')}
+								src={require('./Assets/usaa.png')}
+							/>
+						</Grid>
+						<Grid item lg={2} xs={12} style={{ marginTop: '1rem' }}>
+							<img
+								width='50%'
+								height='auto'
+								object-fit='fit'
+								alt='missing'
+								// @ts-ignore
+								src={require('./Assets/nyl.png')}
 							/>
 						</Grid>
 						<Grid item lg={2} xs={12} style={{ marginTop: '1rem' }}>
@@ -303,17 +313,7 @@ class App extends Component {
 								object-fit='fit'
 								alt='missing'
 								// @ts-ignore
-								src={require('./Assets/2.png')}
-							/>
-						</Grid>
-						<Grid item lg={2} xs={12} style={{ marginTop: '1rem' }}>
-							<img
-								width='80%'
-								height='auto'
-								object-fit='fit'
-								alt='missing'
-								// @ts-ignore
-								src={require('./Assets/3.png')}
+								src={require('./Assets/tamer.png')}
 							/>
 						</Grid>
 						<Grid item lg={2} xs={12} style={{ marginTop: '0rem' }}>
@@ -322,41 +322,18 @@ class App extends Component {
 								height='auto'
 								alt='missing'
 								// @ts-ignore
-								src={require('./Assets/4.png')}
-							/>
-						</Grid>
-						<Grid item lg={2} xs={12} style={{ marginTop: '1rem' }}>
-							<img
-								width='80%'
-								height='auto'
-								object-fit='fit'
-								alt='missing'
-								// @ts-ignore
-								src={require('./Assets/5.png')}
+								src={require('./Assets/prud.png')}
 							/>
 						</Grid>
 					</Grid>
 					<Grid container xs={10} style={{ paddingBottom: '1rem', marginTop: '1rem' }}>
 						<Grid item lg={3} xs={12} style={{ alignSelf: 'flex-end' }}>
-							<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>2021 Quotehound</Typography>
+							<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>2021 Cover My Expense</Typography>
+							<Typography style={{fontSize: '12px', color: 'rgb(166, 166, 166)' }}>Powered By Quotehound</Typography>
 						</Grid>
 						<Grid item lg={6} xs={false} />
 						<Grid container lg={3} xs={12}>
-							<Grid item lg={4} xs={12} style={{ alignSelf: 'center', marginTop: '1rem' }}>
-								<Typography
-									style={{
-										fontSize: '15px',
-										color: 'rgb(166, 166, 166)',
-										fontWeight: 600,
-									}}>
-									<a
-										href='https://quotehound.com/'
-										// @ts-ignore
-										style={{ color: 'rgb(166,166,166)', fontWeight: '400' }}>
-										Visit Us
-									</a>
-								</Typography>
-							</Grid>
+							
 							<Grid item lg={4} xs={12} style={{ alignSelf: 'center', marginTop: '1rem' }}>
 								<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>
 									<a

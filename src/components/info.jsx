@@ -29,7 +29,7 @@ class Info extends Component {
     this.setState({
       loading: true 
     }, this.PostDataOfLifeInsurance(this.props.postData));
-    this.props.history.push("/thank-you-commercial")
+    this.props.history.push("/thank-you")
   };
 
 

@@ -61,7 +61,7 @@ class DesiredCoverage extends Component {
                 ]}
               >
                 <Select size="large" name="desired_coverage" placeholder="Select Coverage">
-                <Option value="5000"  >$5,000</Option>
+                <Option value="5000" >$5,000</Option>
                 <Option value="10000">$10,000</Option>
                 <Option value="1500">$15,000</Option>
                 <Option value="20000">$20,000</Option>

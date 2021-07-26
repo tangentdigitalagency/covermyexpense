@@ -11,7 +11,7 @@
 }
 
 .logosTop {
-    width: 275px;
+    width: 150px;
 
 }
 
@@ -196,7 +196,7 @@
 }
 
 .landing-page .service-main-image.business {
-    background-image: url("./Assets/bImg.jpg");
+    background-image: url("./Assets/couple.png");
     background-size: contain;
     border-radius: 15px;
 }
