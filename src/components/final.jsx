@@ -4,7 +4,7 @@ import UncontrolledLottie from './UncontrolledLottie';
 
 
 
-class S9Final extends Component {
+class ThankYou extends Component {
 	
 
 	state = {
@@ -20,7 +20,7 @@ class S9Final extends Component {
 			
 			
 			<div className="container pt-0 main-content-container">
-				<h1 className="center"> You Are On Your Way To Saving on Your <b>Business</b> Insurance</h1>
+				<h1 className="center"> You Are On Your Way To Saving on Your <b>Burial</b> Insurance</h1>
 				<br></br>
                 <div id="target"> 
 				</div>
@@ -29,4 +29,4 @@ class S9Final extends Component {
 	}
 }
 
-export default S9Final;
+export default ThankYou;

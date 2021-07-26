@@ -8,7 +8,7 @@
 		<meta name="theme-color" content="#000000" />
 		<meta name="description" content="" />
 		<link rel="apple-touch-icon" href="https://uploads-ssl.webflow.com/5dfd95f78d0e1ee3b32e0f58/5e18f9e72b927d3b76c90f5e_Quote%20Hound.png" />
-		<title> Free Business Quote with Quotehound</title>
+		<title> Free Burial Quote with Cover My Expense</title>
 
 		<!--
       manifest.json provides metadata used when your web app is installed on a
@@ -33,16 +33,6 @@
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap" rel="stylesheet" />
 		
-    
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144726423-1">
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){​​​​​dataLayer.push(arguments);}​​​​​
-gtag('js', new Date());
-
- gtag('config', 'UA-144726423-1');
-</script>
 
 
 
@@ -60,13 +50,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 </head>
-	</head>
-	<body>
 
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQG65CH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<body>
+
 
 		
 		
@@ -92,57 +78,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	  
 	  </script> 
 
-<script>
-
-
-	function getParam(p) {
-	var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
-	return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
-	}
-	
-	function getExpiryRecord(value) {
-	var expiryPeriod = 90 * 24 * 60 * 60 * 1000; // 90 day expiry in milliseconds
-	
-	var expiryDate = new Date().getTime() + expiryPeriod;
-	return {
-	value: value,
-	expiryDate: expiryDate
-	};
-	}
-	
-	function addGclid() {
-	var gclidParam = getParam('gclid');
-	var gclidFormFields = ['gclid_field', 'foobar']; // all possible gclid form field ids here
-	var gclidRecord = null;
-	var currGclidFormField;
-	
-	var gclsrcParam = getParam('gclsrc');
-	var isGclsrcValid = !gclsrcParam || gclsrcParam.indexOf('aw') !== -1;
-	
-	gclidFormFields.forEach(function (field) {
-	if (document.getElementById(field)) {
-	currGclidFormField = document.getElementById(field);
-	}
-	});
-	
-	if (gclidParam && isGclsrcValid) {
-	gclidRecord = getExpiryRecord(gclidParam);
-	localStorage.setItem('gclid', JSON.stringify(gclidRecord));
-	}
-	
-	var gclid = gclidRecord || JSON.parse(localStorage.getItem('gclid'));
-	var isGclidValid = gclid && new Date().getTime() < gclid.expiryDate;
-	
-	if (currGclidFormField && isGclidValid) {
-	currGclidFormField.value = gclid.value;
-	}
-	}
-	
-	window.addEventListener('load', addGclid);
-	
-	</script>
-
-
 
 <script type="text/javascript">
 	var MediaAlphaExchange = {
@@ -157,24 +92,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	MediaAlphaExchange__load('target');
 	</script>
 
-
-<!-- Lead Id Script--> 
 <script id="LeadiDscript" type="text/javascript">
-(function() {
-var s = document.createElement('script');
-s.id = 'LeadiDscript_campaign';
-s.type = 'text/javascript';
-s.async = true;
-s.src = '//create.lidstatic.com/campaign/fb074a66-301b-8527-4c20-eee5b974ed7e.js?snippet_version=2';
-var LeadiDscript = document.getElementById('LeadiDscript');
-LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
-})();
-</script>
-<noscript><img src='//create.leadid.com/noscript.gif?lac=45a2434e-3343-bea3-12ad-6220f9a33148&lck=fb074a66-301b-8527-4c20-eee5b974ed7e&snippet_version=2' /></noscript>
+	(function() {
+	var s = document.createElement('script');
+	s.id = 'LeadiDscript_campaign';
+	s.type = 'text/javascript';
+	s.async = true;
+	s.src = '//create.lidstatic.com/campaign/eb823e1f-5094-044b-8797-f648627f0c25.js?snippet_version=2';
+	var LeadiDscript = document.getElementById('LeadiDscript');
+	LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
+	})();
+	</script>
+	<noscript><img src='//create.leadid.com/noscript.gif?lac=45a2434e-3343-bea3-12ad-6220f9a33148&lck=eb823e1f-5094-044b-8797-f648627f0c25&snippet_version=2' /></noscript>
 
-
-<input id ="leadid_token" name="universal_leadid" type="hidden" value="" />
-<input type="hidden" id="gclid_field" name="gclid_field" value="">
+<input id="leadid_token" name="universal_leadid" type="hidden" value="" />
 
 </body>
 </html>

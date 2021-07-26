@@ -1,17 +1,21 @@
 import React, { Component } from "react";
-import { Form, Button, Input,Select, Progress } from "antd";
-import CommonComponents from "./CommonComponents";
+import { Form,  Button,Input, Progress, Select, Row, Col} from "antd";
+import CommonComponents from "./CommonComponents"; 
 import {Link,withRouter} from "react-router-dom"; 
 import { ArrowLeftOutlined } from '@ant-design/icons';
 const {Option} = Select;
 
-class S5StateAndZip extends Component {
+
+class Living extends Component {
   onFinish = (values) => {
     // this.props.nextStep();
-    this.props.setBusinessState(values.state);
-    this.props.setBusinessZip(values.zip_code);
+    this.props.setAddress(values.address);
+    this.props.setCity(values.city);
+    this.props.setZip(values.zip_code)
+    this.props.setState(values.state)
+    
     console.log("Success:", values);
-    this.props.history.push("/step6")
+    this.props.history.push("/step5")
   };
 
   onFinishFailed = (errorInfo) => {
@@ -20,14 +24,15 @@ class S5StateAndZip extends Component {
   render() { 
     return (
       <div className="card shadow-lg" style={{ borderRadius: "25px" }}>
-      <Progress percent={62.5} status="active" showInfo={false} className="pbar"/>
+                <Progress percent={50} status="active" showInfo={false} className="pbar"/>
+
         <CommonComponents
           currentStep={this.props.currentStep}
           totalSteps={this.props.totalSteps}
           previousStep={this.props.previousStep}
         />
          <div className="p-2">
-                   <Link to="/step4">
+           <Link to="/step3">
                     <Button  type="primary" shape="circle"  >
                         <ArrowLeftOutlined className="anticon" />
                     </Button>
@@ -37,22 +42,66 @@ class S5StateAndZip extends Component {
           <div
             className="card-body d-xl-flex justify-content-center align-items-center"
             align="center"
-            style={{ paddingTop: "0px" }}
+            style={{ paddingTop:"0px" }}
           >
             <Form
               name="basic"
               className="mywidth"
               onFinish={this.onFinish}
               initialValues={{
+                address: this.props.address,
+                city: this.props.city,
                 state: this.props.state,
                 zip_code: this.props.zip_code
               }}
               onFinishFailed={this.onFinishFailed}
             >
-              <h3>Where’s your business located?</h3>
+              <h3>Where are you located?</h3>
               <br />
-              <h5>State</h5>
+              <h5>Addess</h5>
               <Form.Item
+                name="address"
+                hasFeedback
+                rules={[
+                  {
+                    required: true,
+                    message: "Please Enter Your Home Address",
+                  },
+                  {
+                      max:100, message:'Max Length Of Home Address Is 100 Characters'
+                  }
+                ]}
+              >
+                <Input  
+                  size="large"
+                  placeholder="Address"
+                />
+              </Form.Item>
+
+              <Row gutter={[16, 16]}>
+    <Col xs={24} xl={8}>
+              <Form.Item
+                name="city"
+                hasFeedback
+                rules={[
+                  {
+                    required: true,
+                    message: "Please Enter Your city",
+                  },
+                  
+                ]}
+              >
+                <Input
+                  size="large"
+                  placeholder="City"
+                  type="text"
+                />
+              </Form.Item>
+    </Col>
+    <Col xs={24} xl={8}>
+
+
+    <Form.Item
                 name="state"
                 hasFeedback
                 rules={[
@@ -120,8 +169,9 @@ class S5StateAndZip extends Component {
                   <Option value="WY">WY</Option>
                 </Select>
               </Form.Item>
-              <h5>Zip
-              </h5>
+    </Col>
+    <Col xs={24} xl={8}>
+  
               <Form.Item
                 name="zip_code"
                 hasFeedback
@@ -142,7 +192,15 @@ class S5StateAndZip extends Component {
                   type="number"
                 />
               </Form.Item>
-              {/* <Link to="/step6"> */}
+    </Col>
+  </Row>
+
+
+              <Form.Item>
+
+
+              </Form.Item>
+              {/* <Link to="/step5"> */}
               <Form.Item>
                 <Button type="primary" htmlType="submit" block size="large">
                   Next
@@ -157,4 +215,4 @@ class S5StateAndZip extends Component {
   }
 }
 
-export default withRouter(S5StateAndZip);
+export default withRouter(Living);

@@ -1,15 +1,16 @@
 import React, { Component } from "react";
-import {Form, Button, Input, Progress} from "antd";
+import {Form, Button, Input, Progress, Select} from "antd";
 import CommonComponents from "./CommonComponents"; 
 import {Link} from "react-router-dom"; 
 import {Redirect} from "react-router-dom"; 
 import {withRouter } from "react-router-dom";
-class S1FirstAndLastName extends Component {
+const {Option} = Select;
+
+class DesiredCoverage extends Component {
  
   onFinish = (values) => {
     // this.props.nextStep();
-    this.props.setFirstName(values.first_name);
-    this.props.setLastName(values.last_name);
+    this.props.setDesiredCoverage(values.desired_coverage);
     console.log("Success:", values);
     this.props.history.push("/step2")
   };
@@ -39,57 +40,40 @@ class S1FirstAndLastName extends Component {
             style={{ paddingTop:"0px" }}
           >
             <Form
-            submit
-              name="basic"
+              name="desired_Coverage"
               className="mywidth"
               onFinish={this.onFinish}
               initialValues={{
-                first_name: this.props.first_name,
-                last_name: this.props.last_name
+                desired_coverage: this.props.desired_coverage,
               }}
               onFinishFailed={this.onFinishFailed}
             >
-              <h3> Start Saving. Lets Start With your Name</h3>
+              <h3> What's your desired coverage amount?</h3>
               <br />
-              <h5>First Name</h5>
               <Form.Item
-                name="first_name"
+                name="desired_coverage"
                 hasFeedback
                 rules={[
                   {
                     required: true,
-                    message: "Please Enter Your First Name",
-                  },
-                  {
-                      max:100, message:'Max Length Of First Name Is 100 Characters'
+                    message: "Please Select an option ",
                   }
                 ]}
               >
-                <Input  
-                  
-                  size="large"
-                  placeholder="First Name"
-                />
-              </Form.Item>
-              <h5>Last Name</h5>
-              <Form.Item
-                name="last_name"
-                hasFeedback
-                rules={[
-                  {
-                    required: true,
-                    message: "Please Enter Your Last Name",
-                  },
-                  {
-                    max:100, message:'Max Length Of Last Name Is 100 Characters'
-                }
-                ]}
-              >
-                <Input 
-                   
-                  size="large"
-                  placeholder="Last Name"
-                />
+                <Select size="large" name="desired_coverage" placeholder="Select Coverage">
+                <Option value="5000"  >$5,000</Option>
+                <Option value="10000">$10,000</Option>
+                <Option value="1500">$15,000</Option>
+                <Option value="20000">$20,000</Option>
+                <Option value="30000">$30,000</Option>
+                <Option value="40000">$40,000</Option>
+                <Option value="50000">$50,000</Option>
+                <Option value="60000">$60,000</Option>
+                <Option value="70000">$70,000</Option>
+                <Option value="80000">$80,000</Option>
+                <Option value="90000">$90,000</Option>
+                <Option value="100000">$100,000</Option>
+                </Select>
               </Form.Item>
             
               {/* <Link to="/step2">  */}
@@ -117,4 +101,4 @@ class S1FirstAndLastName extends Component {
   }
 }
 
-export default withRouter(S1FirstAndLastName) ;
+export default withRouter(DesiredCoverage) ;

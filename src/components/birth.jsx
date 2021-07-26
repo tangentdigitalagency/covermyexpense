@@ -3,22 +3,26 @@ import { Form,  Button,Input, Progress} from "antd";
 import CommonComponents from "./CommonComponents"; 
 import {Link,withRouter} from "react-router-dom"; 
 import { ArrowLeftOutlined } from '@ant-design/icons';
-class S7BusinessProfessionAndYears extends Component {
+import "./date.css";
+
+class Birth extends Component {
   onFinish = (values) => {
     // this.props.nextStep();
-    this.props.setBusinessProfession(values.business_profession);
-    this.props.setyear_business_founded(values.year_business_founded);
+    this.props.setBirth(values.dob);
     console.log("Success:", values);
-    this.props.history.push("/step8")
+    this.props.history.push("/step4")
   };
 
   onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
+
+  
+
   render() {
-    return ( 
+    return (
       <div className="card shadow-lg" style={{ borderRadius: "25px" }}>
-        <Progress percent={87.5} status="active" showInfo={false} className="pbar"/>
+                <Progress percent={37.5} status="active" showInfo={false} className="pbar"/>
 
         <CommonComponents
           currentStep={this.props.currentStep}
@@ -26,8 +30,8 @@ class S7BusinessProfessionAndYears extends Component {
           previousStep={this.props.previousStep}
         />
          <div className="p-2">
-           <Link to="/step6">
-                    <Button  type="primary" shape="circle"  >
+           <Link to="/step2" >
+                    <Button type="primary" shape="circle"  >
                         <ArrowLeftOutlined className="anticon" />
                     </Button>
                     </Link>
@@ -43,56 +47,36 @@ class S7BusinessProfessionAndYears extends Component {
               className="mywidth"
               onFinish={this.onFinish}
               initialValues={{
-                business_profession: this.props.business_profession,
-                year_business_founded: this.props.year_business_founded
+                dob: this.props.dob,
               }}
               onFinishFailed={this.onFinishFailed}
             >
-              <h3>One more thing...</h3>
+              <h3>What is your Date of birth?</h3>
               <br />
-              <h5>What Is Your Business Profession?
-</h5>
+              <h5>Birthday</h5>
               <Form.Item
-                name="business_profession"
+                name="dob"
                 hasFeedback
                 rules={[
                   {
                     required: true,
-                    message: "Please Enter Your Business Profession",
+                    message: "Please enter a valid Date of birth",
                   },
                   {
-                      max:100, message:'Max Length Of Business Profession Is 100 Characters'
+                    min:10,
+                      max:10, message:'Max Length Of First Name Is 10 Characters'
                   }
+                  
                 ]}
               >
                 <Input  
                   size="large"
-                  placeholder="Business Profession"
+                  placeholder="MM/DD/YYYY"
+                  type="date"
                 />
+               
               </Form.Item>
-              <h5>
-              What Year Was Your Business Founded?
-              </h5>
-              <Form.Item
-                name="year_business_founded"
-                hasFeedback
-                rules={[
-                  {
-                    required: true,
-                    message: "Please Enter Year",
-                  },
-                  {
-                    max:4, message:'Max Length Of year Is 4 Characters'
-                }
-                ]}
-              >
-                <Input  
-                  size="large"
-                  placeholder="2019"
-                  type="number"
-                />
-              </Form.Item>
-              {/* <Link to="/step8"> */}
+              {/* <Link to="/step4"> */}
               <Form.Item>
                 <Button type="primary" htmlType="submit" block size="large">
                   Next
@@ -107,4 +91,4 @@ class S7BusinessProfessionAndYears extends Component {
   }
 }
 
-export default withRouter(S7BusinessProfessionAndYears);
+export default withRouter(Birth);
