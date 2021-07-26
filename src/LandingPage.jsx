@@ -2,8 +2,8 @@ import { Button, Card, Col, Collapse, Layout, Row, Typography, Form,  Input } fr
 import Grid from '@material-ui/core/Grid';
 
 import logo from './Assets/cme.png';
-import usaa from './Assets/usaa.png';
-import nyl from './Assets/nyl.png';
+import ehthos from './Assets/ethos.png';
+import ladder from './Assets/ladder.svg';
 import tamer from './Assets/tamer.png';
 import prud from './Assets/prud.png';
 import heroImg from './Assets/hands.png';
@@ -94,13 +94,11 @@ function LandingPage(props) {
 							<div className='section-two-img-container'>
 								<Row>
 									<Col xs={{ span: 24 }} lg={{ span: 12 }} className='px-md-4 py-3  '>
-										<img src={usaa} alt='logo1'className="logosTop" />
+										<img src={ehthos} alt='logo1'className="logosTop" />
 									</Col>
 									<Col xs={{ span: 24 }} lg={{ span: 9, offset: 3 }} className='px-md-4 py-3  '>
-										<img src={nyl} alt='logo1' className='ml-1' className="logosTop" />
+										<img src={ladder} alt='logo1' className='ml-1' className="logosTop" />
 									</Col>
-								</Row>
-								<Row>
 									<Col xs={{ span: 24 }} lg={{ span: 12 }} className='px-md-4 py-3  '>
 										<img src={tamer} alt='logo1' className="logosTop" />
 									</Col>
@@ -108,6 +106,7 @@ function LandingPage(props) {
 										<img src={prud} alt='logo1' className="logosTop" />
 									</Col>
 								</Row>
+
 							</div>
 						</div>
 					</section>
@@ -256,10 +255,10 @@ function LandingPage(props) {
 							</Row>
 							<Row>
 								<Col xs={{ span: 24 }} lg={{ span: 6 }} className='section-two-imgs '>
-									<img src={usaa} alt='logo1' className=' logosTop' />
+									<img src={ehthos} alt='logo1' className=' logosTop' />
 								</Col>
 								<Col xs={{ span: 24 }} lg={{ span: 6 }} className='section-two-imgs '>
-									<img src={nyl} alt='logo1' className=' logosTop' />
+									<img src={ladder} alt='logo1' className=' logosTop' />
 								</Col>
 								<Col xs={{ span: 24 }} lg={{ span: 6 }} className='section-two-imgs'>
 									<img src={tamer} alt='logo1' className='logosTop' />

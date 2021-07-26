@@ -57,22 +57,20 @@ class App extends Component {
 
 	copyValuesToPostData2 = () => {
 		var tempArray = {
-			email_address	: this.state.postData.email_address,
-			phone_home: this.state.postData.phone_home,
-			address: this.state.postData.address,
 			zip: this.state.postData.zip_code,
 		};
 		this.setState({ postData2: tempArray });
-		window.MediaAlphaExchange = {
-			data: {
-				zip: '98052',
+		var MediaAlphaExchange = { 
+			"data": {
+			   "zip": "",
 			},
-			placement_id: '4yclnD1Pz-JicFFmiW0DhV7a86VXHw',
-			sub_1: 'test sub id',
-			type: 'ad_unit',
-			version: 17,
-		};
-		window.MediaAlphaExchange__load('target');
+			"placement_id": "YiPFAJc_r0i9fsZr0uP7vvicsinK3Q",
+			"sub_1": "test sub id",
+			"type": "ad_unit",
+			"version": 17
+		 };
+		 console.log("SetMA");
+		 MediaAlphaExchange__load('mediaalpha_placeholder');
 		return this.state.postData2;
 	};
 	// componentDidMount() {
@@ -281,34 +279,36 @@ class App extends Component {
 					</div>
 				</div>
 
+				
+
 				<Grid container xs={12} align='center' style={{ justifyContent: 'center' }}>
 					<Grid container xs={8} style={{ justifyContent: 'center' }}>
 						<Grid item xs={12}>
 							<Typography style={{ fontWeight: 700, lineHeight: 1.5 }}>Providers Include:</Typography>
 						</Grid>
-						<Grid item lg={2} xs={12} style={{ marginTop: '1rem' }}>
-							<img
-								width='80%'
-								height='auto'
-								object-fit='fit'
-								alt='missing'
-								// @ts-ignore
-								src={require('./Assets/usaa.png')}
-							/>
-						</Grid>
-						<Grid item lg={2} xs={12} style={{ marginTop: '1rem' }}>
+						<Grid item lg={2} xs={12} >
 							<img
 								width='50%'
 								height='auto'
 								object-fit='fit'
 								alt='missing'
 								// @ts-ignore
-								src={require('./Assets/nyl.png')}
+								src={require('./Assets/ethos.png')}
 							/>
 						</Grid>
-						<Grid item lg={2} xs={12} style={{ marginTop: '1rem' }}>
+						<Grid item lg={2} xs={12} >
 							<img
-								width='80%'
+								width='50%'
+								height='auto'
+								object-fit='fit'
+								alt='missing'
+								// @ts-ignore
+								src={require('./Assets/ladder.svg')}
+							/>
+						</Grid>
+						<Grid item lg={2} xs={12} >
+							<img
+								width='50%'
 								height='auto'
 								object-fit='fit'
 								alt='missing'
@@ -316,9 +316,9 @@ class App extends Component {
 								src={require('./Assets/tamer.png')}
 							/>
 						</Grid>
-						<Grid item lg={2} xs={12} style={{ marginTop: '0rem' }}>
+						<Grid item lg={2} xs={12} >
 							<img
-								width='80%'
+								width='50%'
 								height='auto'
 								alt='missing'
 								// @ts-ignore
@@ -368,3 +368,7 @@ class App extends Component {
 }
 
 export default withRouter(App);
+function MediaAlphaExchange__load(arg0) {
+	throw new Error('Function not implemented.');
+}
+

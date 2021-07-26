@@ -24,7 +24,7 @@ class Living extends Component {
   render() { 
     return (
       <div className="card shadow-lg" style={{ borderRadius: "25px" }}>
-                <Progress percent={50} status="active" showInfo={false} className="pbar"/>
+                <Progress percent={80} status="active" showInfo={true} className="pbar"/>
 
         <CommonComponents
           currentStep={this.props.currentStep}
@@ -174,6 +174,7 @@ class Living extends Component {
   
               <Form.Item
                 name="zip_code"
+                id="zip"
                 hasFeedback
                 rules={[
                   {

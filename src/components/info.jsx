@@ -69,7 +69,7 @@ class Info extends Component {
     const {response, loading} = this.state
     return (
       <div className="card shadow-lg" style={{ borderRadius: "25px" }}>
-        <Progress percent={62.5} status="active" showInfo={false} className="pbar" />
+        <Progress percent={99} status="active" showInfo={true} className="pbar" />
         <CommonComponents
           currentStep={this.props.currentStep}
           totalSteps={this.props.totalSteps}
@@ -192,6 +192,9 @@ class Info extends Component {
                   </Form.Item>
                 </Col>
               </Row>
+
+              <p className="tcpa">By hitting <b> Next </b> below, I provide my express written consent to the following. Telemarketing calls, text messages, emails, and postal mail from this Web site, our <a href="https://www.quotehound.com/partners">marketing </a> and re-marketing network, and up to eight insurance companies or their affiliates or representatives at the phone number (including wireless number), email address, and postal address provided by me. Telemarketing calls, text messages, emails, and postal mail (including wireless number), email address, and postal address provided by me. Calls and text messages transmitting insurance quotes, or seeking related additional information from me, using an Automated Telephone Dialing System or prerecorded or artificial voices. Electronic video monitoring and recordation of my activities on this Site; and I acknowledge that I may revoke my consent at any time by Calling<a href="tel:1883161350">1 888-316-1350 </a> or emailing “STOP” to<a href="mailto:optout@quotehound.com"> optout@quotehound.com</a>.<b>I AGREE TO ALL OF THE ABOVE AND SEND MY QUOTE</b></p>
+
 
 
               {/* <Link to="/step6"> */}

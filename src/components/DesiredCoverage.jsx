@@ -27,7 +27,7 @@ class DesiredCoverage extends Component {
    
     return (
       <div className="card shadow-lg" style={{ borderRadius: "25px" }}>
-        <Progress percent={12.5} status="active" showInfo={false} className="pbar"/>
+        <Progress percent={20} status="active" showInfo={true} className="pbar"/>
         <CommonComponents
           currentStep={this.props.currentStep}
           totalSteps={this.props.totalSteps}
