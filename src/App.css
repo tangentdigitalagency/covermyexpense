@@ -1,5 +1,5 @@
 body {
-	font-family: "Ubuntu", sans-serif;
+	font-family: "Lato", sans-serif;
 	box-sizing: border-box;
 }
 
@@ -10,13 +10,17 @@ h4,
 h5,
 h6,
 a {
-	font-family: "Ubuntu", sans-serif;
+	font-family: "Lato", sans-serif;
 }
 
 .numInput {
 	width: 40%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.blogo{
+	width: 50%;
 }
 
 .right-number {
@@ -53,8 +57,7 @@ option:hover {
 }
 
 .tcpa {
-	font-size: small;
-	font-weight: lighter;
+	font-weight: normal;
 	max-width: 100%;
 }
 

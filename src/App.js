@@ -10,6 +10,7 @@ import Logo from './Assets/cme.png';
 // @ts-ignore
 import { Button, Typography, Progress } from 'antd';
 import { PhoneOutlined } from '@ant-design/icons';
+import all from './Assets/all.png'
 
 
 import DesiredCoverage from './components/DesiredCoverage';
@@ -281,50 +282,14 @@ class App extends Component {
 
 				
 
-				<Grid container xs={12} align='center' style={{ justifyContent: 'center' }}>
+				<Grid container xs={12} align='center' style={{ justifyContent: 'center', paddingTop: '100px'}}>
 					<Grid container xs={8} style={{ justifyContent: 'center' }}>
 						<Grid item xs={12}>
 							<Typography style={{ fontWeight: 700, lineHeight: 1.5 }}>Providers Include:</Typography>
+							<img src={all} alt='logo1' className=' blogo' />
+
 						</Grid>
-						<Grid item lg={2} xs={12} >
-							<img
-								width='50%'
-								height='auto'
-								object-fit='fit'
-								alt='missing'
-								// @ts-ignore
-								src={require('./Assets/ethos.png')}
-							/>
-						</Grid>
-						<Grid item lg={2} xs={12} >
-							<img
-								width='50%'
-								height='auto'
-								object-fit='fit'
-								alt='missing'
-								// @ts-ignore
-								src={require('./Assets/ladder.svg')}
-							/>
-						</Grid>
-						<Grid item lg={2} xs={12} >
-							<img
-								width='50%'
-								height='auto'
-								object-fit='fit'
-								alt='missing'
-								// @ts-ignore
-								src={require('./Assets/tamer.png')}
-							/>
-						</Grid>
-						<Grid item lg={2} xs={12} >
-							<img
-								width='50%'
-								height='auto'
-								alt='missing'
-								// @ts-ignore
-								src={require('./Assets/prud.png')}
-							/>
-						</Grid>
+
 					</Grid>
 					<Grid container xs={10} style={{ paddingBottom: '1rem', marginTop: '1rem' }}>
 						<Grid item lg={3} xs={12} style={{ alignSelf: 'flex-end' }}>
@@ -334,6 +299,16 @@ class App extends Component {
 						<Grid item lg={6} xs={false} />
 						<Grid container lg={3} xs={12}>
 							
+						<Grid item lg={4} xs={12} style={{ alignSelf: 'center', marginTop: '1rem' }}>
+								<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>
+									<a
+										href='https://www.quotehound.com/dont-sell-my-info'
+										// @ts-ignore
+										style={{ color: 'rgb(166,166,166)', fontWeight: '400' }}>
+											Do Not Sell
+									</a>
+								</Typography>
+							</Grid>
 							<Grid item lg={4} xs={12} style={{ alignSelf: 'center', marginTop: '1rem' }}>
 								<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>
 									<a

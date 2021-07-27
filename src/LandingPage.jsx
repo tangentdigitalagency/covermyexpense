@@ -2,11 +2,13 @@ import { Button, Card, Col, Collapse, Layout, Row, Typography, Form,  Input } fr
 import Grid from '@material-ui/core/Grid';
 
 import logo from './Assets/cme.png';
-import ehthos from './Assets/ethos.png';
-import ladder from './Assets/ladder.svg';
-import tamer from './Assets/tamer.png';
-import prud from './Assets/prud.png';
+// import ehthos from './Assets/ethos.png';
+// import ladder from './Assets/ladder.svg';
+// import tamer from './Assets/tamerica.png';
+// import prud from './Assets/prudential.png';
 import heroImg from './Assets/hands.png';
+// import aig from './Assets/aig.png';
+import all from './Assets/all.png'; 
 
 import connectImg from './Assets/img/connection.png';
 import whatImg from './Assets/img/car.jpeg';
@@ -92,21 +94,9 @@ function LandingPage(props) {
 								</Col>
 							</Row>
 							<div className='section-two-img-container'>
-								<Row>
-									<Col xs={{ span: 24 }} lg={{ span: 12 }} className='px-md-4 py-3  '>
-										<img src={ehthos} alt='logo1'className="logosTop" />
-									</Col>
-									<Col xs={{ span: 24 }} lg={{ span: 9, offset: 3 }} className='px-md-4 py-3  '>
-										<img src={ladder} alt='logo1' className='ml-1' className="logosTop" />
-									</Col>
-									<Col xs={{ span: 24 }} lg={{ span: 12 }} className='px-md-4 py-3  '>
-										<img src={tamer} alt='logo1' className="logosTop" />
-									</Col>
-									<Col xs={{ span: 24 }} lg={{ span: 10, offset: 2 }} className='px-md-4 py-3'>
-										<img src={prud} alt='logo1' className="logosTop" />
-									</Col>
-								</Row>
+							<img src={all} alt='logo1' className=' logosTop' />
 
+							
 							</div>
 						</div>
 					</section>
@@ -253,19 +243,10 @@ function LandingPage(props) {
 									</h3>
 								</Col>
 							</Row>
-							<Row>
-								<Col xs={{ span: 24 }} lg={{ span: 6 }} className='section-two-imgs '>
-									<img src={ehthos} alt='logo1' className=' logosTop' />
-								</Col>
-								<Col xs={{ span: 24 }} lg={{ span: 6 }} className='section-two-imgs '>
-									<img src={ladder} alt='logo1' className=' logosTop' />
-								</Col>
-								<Col xs={{ span: 24 }} lg={{ span: 6 }} className='section-two-imgs'>
-									<img src={tamer} alt='logo1' className='logosTop' />
-								</Col>
-								<Col xs={{ span: 24 }} lg={{ span: 6 }} className='section-two-imgs'>
-									<img src={prud} alt='logo1' className=' logosTop' />
-								</Col>
+
+							<img src={all} alt='logo1' className=' logosTop' />
+
+							<Row>			
 							</Row>
 						</div>
 					</section>
@@ -294,7 +275,7 @@ function LandingPage(props) {
 										href='https://quotehound.com/'
 										// @ts-ignore
 										style={{ color: 'rgb(166,166,166)', fontWeight: '400' }}>
-										Visit Us
+										Do Not Sell
 									</a>
 								</Typography>
 							</Grid>
