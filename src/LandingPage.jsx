@@ -272,7 +272,7 @@ function LandingPage(props) {
 										fontWeight: 600,
 									}}>
 									<a
-										href='https://quotehound.com/'
+										href='https://www.quotehound.com/dont-sell-my-info'
 										// @ts-ignore
 										style={{ color: 'rgb(166,166,166)', fontWeight: '400' }}>
 										Do Not Sell
