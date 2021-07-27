@@ -6,7 +6,7 @@ import logo from './Assets/cme.png';
 // import ladder from './Assets/ladder.svg';
 // import tamer from './Assets/tamerica.png';
 // import prud from './Assets/prudential.png';
-import heroImg from './Assets/hands.png';
+import heroImg from './Assets/hand.png';
 // import aig from './Assets/aig.png';
 import all from './Assets/all.png'; 
 
@@ -211,7 +211,7 @@ function LandingPage(props) {
 								<img src={quote} alt='quote' width='21' className='quote' />
 								<p className='quote-text-v1'>
 									<em className='font-italic italic-text-4'>
-									“I have never had such a great experience getting insurance quotes than I had using Quotehound.  Their form is super quick and simple.  As soon as I hit submit, they matched me with a great insurance agent named Sandy.  I had all the information and quotes I had to make the decision to switch my insurance.  Thank you Quotehound for the great connection!" <br/>
+									“I have never had such a great experience getting insurance quotes than I had using Cover My Expense.  Their form is super quick and simple.  As soon as I hit submit, they matched me with a great insurance agent named Sandy.  I had all the information and quotes I had to make the decision to switch my insurance.  Thank you Cover My Expense for the great connection!" <br/>
 									</em>
 								</p>
 								
@@ -257,7 +257,7 @@ function LandingPage(props) {
 							<h1 className='heading-16'>Cover My Expense</h1>
 						</div>
 						<div className='div-block-58'>
-						<h3 className="h3">powered by Quotehound Inc 2021  </h3>
+						<h3 className="h3">Powered by Quotehound Inc 2021  </h3>
 
 						
 						<Grid container xs={12} align='center' style={{ justifyContent: 'center' }}>
