@@ -1,15 +1,20 @@
 import React, { Component } from "react";
-import { Form,  Button,Input, Progress} from "antd";
+import { Form,  Button,Input, Progress, Select, Row, Col} from "antd";
 import CommonComponents from "./CommonComponents"; 
 import {Link,withRouter} from "react-router-dom"; 
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import "./date.css";
-
+const {Option} = Select;
 class Birth extends Component {
   onFinish = (values) => {
     // this.props.nextStep();
-    this.props.setBirth(values.dob);
-    console.log("Success:", values);
+    // this.props.setMonth(values.month);
+    // this.props.setDay(values.day);
+    // this.props.setYear(values.year)
+    
+
+    this.props.setBirth(values.month + values.day + '/' + values.year)
+    console.log("Success:", this.props.setBirth);
     this.props.history.push("/step4")
   };
 
@@ -47,36 +52,94 @@ class Birth extends Component {
               className="mywidth"
               onFinish={this.onFinish}
               initialValues={{
-                dob: this.props.dob,
+                month: this.props.month, 
+                day: this.props.day,
+                year: this.props.year
               }}
               onFinishFailed={this.onFinishFailed}
             >
               <h3>What is your Date of birth?</h3>
               <br />
-              <h5>Birthday</h5>
-              <Form.Item
-                name="dob"
+              <Row gutter={[16, 16]}>
+    <Col xs={24} xl={8}>
+    <Form.Item
+                name="month"
                 hasFeedback
                 rules={[
                   {
                     required: true,
-                    message: "Please enter a valid Date of birth",
+                    message: "Please Select Month",
+                  }
+                ]}
+              >
+                <Select size="large" name="month" placeholder="Select Month">
+                  <Option value="01/">January</Option>
+                  <Option value="02/">February</Option>
+                  <Option value="03/">March</Option>
+                  <Option value="04/">April</Option>
+                  <Option value="05/">May</Option>
+                  <Option value="06/">June</Option>
+                  <Option value="07/">July</Option>
+                  <Option value="08/">August</Option>
+                  <Option value="09/">September</Option>
+                  <Option value="10/">October</Option>
+                  <Option value="11/">November</Option>
+                  <Option value="12/">December</Option>
+                  
+                </Select>
+              </Form.Item>
+    </Col>
+    <Col xs={24} xl={8}>
+    <Form.Item
+                name="day"
+                id="day"
+                hasFeedback
+                rules={[
+                  {
+                    required: true,
+                    message: "Please Enter Day",
                   },
                   {
-                    min:10,
-                      max:10, message:'Max Length Of First Name Is 10 Characters'
-                  }
+                    min: 2, message: 'Please Enter a number from 01-31',
+                    max: 2,
+                  },
                   
                 ]}
               >
-                <Input  
+                <Input
                   size="large"
-                  placeholder="MM/DD/YYYY"
-                  
-                  type="date"
+                  placeholder="Date"
+                  type="number"
                 />
-               
               </Form.Item>
+
+    
+    </Col>
+    <Col xs={24} xl={8}>
+  
+              <Form.Item
+                name="year"
+                id="year"
+                hasFeedback
+                rules={[
+                  {
+                    required: true,
+                    message: 'Please Enter Birth Year'
+                  },
+                  {
+                    max: 4, message: 'Max Length Of Is 5 Characters'
+                  },
+                  
+                ]}
+              >
+                <Input
+                  size="large"
+                  placeholder="Year"
+                  type="number"
+                />
+              </Form.Item>
+    </Col>
+  </Row>
               {/* <Link to="/step4"> */}
               <Form.Item>
                 <Button type="primary" htmlType="submit" block size="large">

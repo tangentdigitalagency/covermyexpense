@@ -201,12 +201,12 @@ class App extends Component {
 								</Route>
 								<Route path='/step3'>
 									<Birth
-										dob={this.state.postData.dob}
+										
 										setBirth={(v) => {
 											this.setState({
 												postData: {
 													...this.state.postData,
-													dob: v,
+													dob: v
 												},
 											});
 										}}

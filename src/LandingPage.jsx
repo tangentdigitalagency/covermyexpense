@@ -6,7 +6,7 @@ import logo from './Assets/cme.png';
 // import ladder from './Assets/ladder.svg';
 // import tamer from './Assets/tamerica.png';
 // import prud from './Assets/prudential.png';
-import heroImg from './Assets/hand.png';
+import heroImg from './Assets/couple.png';
 // import aig from './Assets/aig.png';
 import all from './Assets/all.png'; 
 
