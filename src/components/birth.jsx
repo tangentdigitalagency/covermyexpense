@@ -72,6 +72,7 @@ class Birth extends Component {
                 <Input  
                   size="large"
                   placeholder="MM/DD/YYYY"
+                  
                   type="date"
                 />
                

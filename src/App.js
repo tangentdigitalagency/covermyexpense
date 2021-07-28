@@ -10,7 +10,7 @@ import Logo from './Assets/cme.png';
 // @ts-ignore
 import { Button, Typography, Progress } from 'antd';
 import { PhoneOutlined } from '@ant-design/icons';
-import all from './Assets/all.png'
+import tran from './Assets/tran.png'
 
 
 import DesiredCoverage from './components/DesiredCoverage';
@@ -56,22 +56,48 @@ class App extends Component {
 		},
 	};
 
+	callMediaAlpha = () => {
+
+		var tempArray = {
+       zip: this.state.zip_code,
+}
+
+		window.MediaAlphaExchange = {    
+			"data": {       
+				  "zip": tempArray.zip,   
+			  },   
+			"placement_id": "YiPFAJc_r0i9fsZr0uP7vvicsinK3Q",    
+			"sub_1": "test sub id",    
+			 "type": "ad_unit",   
+			   "version": 17 }; 
+	  
+	  window.MediaAlphaExchange__load('mediaalpha_placeholder'); 
+		
+	   }
+
+
+	  UNSAFE_componentWillUpdate  = () => {
+		console.log(this.state.postData);
+	  };
+
+	  
+
 	copyValuesToPostData2 = () => {
 		var tempArray = {
 			zip: this.state.postData.zip_code,
 		};
 		this.setState({ postData2: tempArray });
-		var MediaAlphaExchange = { 
-			"data": {
-			   "zip": "",
-			},
-			"placement_id": "YiPFAJc_r0i9fsZr0uP7vvicsinK3Q",
-			"sub_1": "test sub id",
-			"type": "ad_unit",
-			"version": 17
-		 };
+		// var MediaAlphaExchange = { 
+		// 	"data": {
+		// 	   "zip": "",
+		// 	},
+		// 	"placement_id": "YiPFAJc_r0i9fsZr0uP7vvicsinK3Q",
+		// 	"sub_1": "test sub id",
+		// 	"type": "ad_unit",
+		// 	"version": 17
+		//  };
 		 console.log("SetMA");
-		 MediaAlphaExchange__load('mediaalpha_placeholder');
+//MediaAlphaExchange__load('mediaalpha_placeholder');
 		return this.state.postData2;
 	};
 	// componentDidMount() {
@@ -121,6 +147,7 @@ class App extends Component {
 							alt=''
 						/>
 						<ul className='nav nav-fill '>
+							Speak To An Agent
 							<li className='nav-item'>
 								<Button
 									type='primary'
@@ -131,8 +158,8 @@ class App extends Component {
 											rotate='90'
 										/>
 									}
-									href={'tel:+18554344762'}>
-									(855) 434-4762
+									href={'tel:+18885671448'}>
+									888-567-1448
 								</Button>
 							</li>
 						</ul>
@@ -150,6 +177,8 @@ class App extends Component {
 											this.setState({
 												postData: {
 													...this.state.postData,
+													jornaya_lead_id: document.getElementById('leadid_token').value, 
+													trusted_form_cert_id: document.getElementById('trusted_form_cert_id_0').value ,
 													desired_coverage: v,
 												},
 											});
@@ -234,6 +263,9 @@ class App extends Component {
 										email={this.state.postData.email_address}
 										phone={this.state.postData.phone_home}
 
+										callMediaAlpha={this.callMediaAlpha}
+
+
 										setFName={(v) => {
 											this.setState({
 												postData: {
@@ -266,12 +298,16 @@ class App extends Component {
 												},
 											});
 										}}
-										
+										postData={this.state.postData}
+
 									/>
 								</Route>
 								
 								<Route path='/thank-you'>
-									<ThankYou postData2={this.state.postData} />
+									<ThankYou 
+									postData2={this.state.postData} 
+									/>
+									
 								</Route>
 							</Switch>
 
@@ -285,8 +321,8 @@ class App extends Component {
 				<Grid container xs={12} align='center' style={{ justifyContent: 'center', paddingTop: '100px'}}>
 					<Grid container xs={8} style={{ justifyContent: 'center' }}>
 						<Grid item xs={12}>
-							<Typography style={{ fontWeight: 700, lineHeight: 1.5 }}>Providers Include:</Typography>
-							<img src={all} alt='logo1' className=' blogo' />
+							<Typography style={{ fontWeight: 700, lineHeight: 1.5, paddingBottom: '25px',}}>Providers Include:</Typography>
+							<img src={tran} alt='logo1' className=' blogo' />
 
 						</Grid>
 
@@ -343,7 +379,3 @@ class App extends Component {
 }
 
 export default withRouter(App);
-function MediaAlphaExchange__load(arg0) {
-	throw new Error('Function not implemented.');
-}
-

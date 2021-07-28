@@ -3,18 +3,14 @@ import { Form, Button, Input, Select, Progress, Col, Row } from "antd";
 import CommonComponents from "./CommonComponents";
 import { Link, withRouter } from "react-router-dom";
 import { ArrowLeftOutlined } from '@ant-design/icons';
-import axios from "axios";
+import Axios from "axios";
 import XMLParser from 'react-xml-parser';
-
-
-
-
 class Info extends Component {
 
   state = { 
     error: '',
     loading: false,
-    response: '',
+    response: ''
   }
 
   onFinish = (values) => {
@@ -29,14 +25,16 @@ class Info extends Component {
     this.setState({
       loading: true 
     }, this.PostDataOfLifeInsurance(this.props.postData));
-    this.props.history.push("/thank-you")
-  };
 
+    this.props.callMediaAlpha();
+    this.props.history.push("/thank-you");
+
+  };
 
   PostDataOfLifeInsurance = (postData) => {
     console.log(postData);
 
-    axios.post("https://quotehound.leadspediatrack.com/post.do", null, {
+    Axios.post("https://quotehound.leadspediatrack.com/post.do", null, {
       params: postData,
     })
 
@@ -47,9 +45,7 @@ class Info extends Component {
         this.setState({
           loading: false, 
         },() =>{
-          this.props.nextStep();
-
-          this.props.callMediaAlpha();
+                    
         });
       }
     })

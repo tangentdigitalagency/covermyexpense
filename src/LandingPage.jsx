@@ -260,11 +260,11 @@ function LandingPage(props) {
 						<h3 className="h3">Powered by Quotehound Inc 2021  </h3>
 
 						
-						<Grid container xs={12} align='center' style={{ justifyContent: 'center' }}>
+						<Grid container xs={12} align='left' style={{ justifyContent: 'left' }}>
 		
 					<Grid container xs={10} style={{ paddingBottom: '1rem', marginTop: '1rem' }}>
 						<Grid container lg={5} xs={12}>
-							<Grid item lg={4} xs={12} style={{ alignSelf: 'center', marginTop: '1rem' }}>
+							<Grid item lg={4} xs={12} style={{ alignSelf: 'left', marginTop: '1rem' }}>
 								<Typography
 									style={{
 										fontSize: '15px',
@@ -279,7 +279,7 @@ function LandingPage(props) {
 									</a>
 								</Typography>
 							</Grid>
-							<Grid item lg={4} xs={12} style={{ alignSelf: 'center', marginTop: '1rem' }}>
+							<Grid item lg={4} xs={12} style={{ alignSelf: 'left', marginTop: '1rem' }}>
 								<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>
 									<a
 										href='https://quotehound.com/privacy-policy'
@@ -289,7 +289,7 @@ function LandingPage(props) {
 									</a>
 								</Typography>
 							</Grid>
-							<Grid item lg={4} xs={12} style={{ alignSelf: 'center', marginTop: '1rem' }}>
+							<Grid item lg={4} xs={12} style={{ alignSelf: 'left', marginTop: '1rem' }}>
 								<Typography
 									style={{
 										fontSize: '15px',

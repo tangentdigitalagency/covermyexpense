@@ -26,12 +26,13 @@ class ThankYou extends Component {
 				<div className='card shadow-lg' style={{ borderRadius: '25px' }}>				
 				<div className='d-flex' style={{ minHeight: '20vh' }}>
 					<div className='card-body d-xl-flex justify-content-center align-items-center' align='center'>
-					<h3> A life insurance specialist will be reaching out shortly</h3> 
+					<div id="mediaalpha_placeholder">
+</div>
+
 					</div>
 				</div>
 			</div>
-                <div id="mediaalpha_placeholder">
-</div>
+               
 
             </div>
 		);
