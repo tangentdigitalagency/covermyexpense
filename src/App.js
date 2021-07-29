@@ -142,12 +142,11 @@ class App extends Component {
 						<img
 							// @ts-ignore
 							src={require('./Assets/cme.png')}
-							className='m-4'
-							width='200px'
-							alt=''
+							className='logo'
+														alt=''
 						/>
 						<ul className='nav nav-fill '>
-							Speak To An Agent
+							<h3> Speak To An Agent </h3>
 							<li className='nav-item'>
 								<Button
 									type='primary'

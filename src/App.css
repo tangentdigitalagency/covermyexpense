@@ -19,6 +19,10 @@ a {
 	margin-right: auto;
 }
 
+.logo {
+	width: 250px;
+}
+
 .blogo{
 	width: 50%;
 }
@@ -81,10 +85,17 @@ option:hover {
 	.mywidth{
 		width: 100%;
 	}
+
+	.logo {
+		width: 150px;
+	}
 }
 @media (min-width: 768px) { 
 	.mywidth{
 		width: 100%;
+	}
+	.logo {
+		width: 150px;
 	}
  }
 @media (min-width: 992px) { 

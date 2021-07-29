@@ -138,8 +138,7 @@ class Birth extends Component {
                   size="large"
                   placeholder="Year"
                   type="number"
-                  min="1990"
-                  max="2001"
+                  min="1900"
                 />
               </Form.Item>
     </Col>
