@@ -145,8 +145,8 @@ class App extends Component {
 							className='logo'
 														alt=''
 						/>
-						<ul className='nav nav-fill '>
-							<h3> Speak To An Agent </h3>
+						<b className='nav-item'>Speak To An Agent</b> 
+						<ul className='nav nav-fill'>
 							<li className='nav-item'>
 								<Button
 									type='primary'

@@ -253,33 +253,29 @@ function LandingPage(props) {
 				</Content>
 				<Footer className='footer'>
 					<div className='footer-container'>
-						<div className='footer-top-wrap-2'>
-							<h1 className='heading-16'>Cover My Expense</h1>
-						</div>
 						<div className='div-block-58'>
-						<h3 className="h3">Powered by Quotehound Inc 2021  </h3>
-
-						
+					
 						<Grid container xs={12} align='left' style={{ justifyContent: 'left' }}>
 		
-					<Grid container xs={10} style={{ paddingBottom: '1rem', marginTop: '1rem' }}>
-						<Grid container lg={5} xs={12}>
-							<Grid item lg={4} xs={12} style={{ alignSelf: 'left', marginTop: '1rem' }}>
-								<Typography
-									style={{
-										fontSize: '15px',
-										color: 'rgb(166, 166, 166)',
-										fontWeight: 600,
-									}}>
+						<Grid container xs={10} style={{ paddingBottom: '1rem', marginTop: '1rem' }}>
+						<Grid item lg={3} xs={12} style={{ alignSelf: 'flex-end' }}>
+							<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>2021 Cover My Expense</Typography>
+							<Typography style={{fontSize: '12px', color: 'rgb(166, 166, 166)' }}>Powered By Quotehound</Typography>
+						</Grid>
+						<Grid item lg={6} xs={false} />
+						<Grid container lg={3} xs={12}>
+							
+						<Grid item lg={4} xs={12} style={{ alignSelf: 'center' }}>
+								<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>
 									<a
 										href='https://www.quotehound.com/dont-sell-my-info'
 										// @ts-ignore
 										style={{ color: 'rgb(166,166,166)', fontWeight: '400' }}>
-										Do Not Sell
+											Do Not Sell
 									</a>
 								</Typography>
 							</Grid>
-							<Grid item lg={4} xs={12} style={{ alignSelf: 'left', marginTop: '1rem' }}>
+							<Grid item lg={4} xs={12} style={{ alignSelf: 'center'}}>
 								<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>
 									<a
 										href='https://quotehound.com/privacy-policy'
@@ -289,7 +285,7 @@ function LandingPage(props) {
 									</a>
 								</Typography>
 							</Grid>
-							<Grid item lg={4} xs={12} style={{ alignSelf: 'left', marginTop: '1rem' }}>
+							<Grid item lg={4} xs={12} style={{ alignSelf: 'center'}}>
 								<Typography
 									style={{
 										fontSize: '15px',
