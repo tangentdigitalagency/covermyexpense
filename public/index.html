@@ -32,6 +32,24 @@
 		<title>React App</title>
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap" rel="stylesheet" />
+
+
+		<link rel="dns-prefetch" href="https://api.connectstreams.com" />
+<script>
+
+	dataLayer = [{ 'moduleid': '', 'phonenumber': '', 'destinationphonenumber': '', 'conversionid': '' }];
+	
+	</script>
+	
+	<img id="ping" style="display: none;" src=""/>
+	<script>
+		ga(function(tracker) {
+			var clientId = tracker.get('clientId');
+			var url = 'https://leads.qhportal.com/google-analytics/send-id?wmid=1009&token=78687fc791d6f5a8ca1ca6c1f7bd9b98&google=' + clientId;
+			document.getElementById('ping').src = url;
+		});
+	</script>
+	
 		
 
 
@@ -126,22 +144,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 	<div class="g3cm_holder" data-module="undefined" data-showoninit="true" data-destination="undefined" data-conversionid="undefined" id="g3cm_holder_kqMa" data-container="kqMa"></div>
 	 
-
-<script>
-
-	dataLayer = [{ 'moduleid': '', 'phonenumber': '', 'destinationphonenumber': '', 'conversionid': '' }];
-	
-	</script>
-	
-	<img id="ping" style="display: none;" src=""/>
-	<script>
-		ga(function(tracker) {
-			var clientId = tracker.get('clientId');
-			var url = 'https://leads.qhportal.com/google-analytics/send-id?wmid=1009&token=78687fc791d6f5a8ca1ca6c1f7bd9b98&google=' + clientId;
-			document.getElementById('ping').src = url;
-		});
-	</script>
-	
 
 </body>
 </html>
