@@ -60,27 +60,27 @@ class DesiredCoverage extends Component {
                   }
                 ]}
               >
-                <Select size="large" name="desired_coverage" placeholder="Select Coverage">
-                <Option value="5000" >$5,000</Option>
-                <Option value="10000">$10,000</Option>
-                <Option value="1500">$15,000</Option>
-                <Option value="20000">$20,000</Option>
-                <Option value="30000">$30,000</Option>
-                <Option value="40000">$40,000</Option>
-                <Option value="50000">$50,000</Option>
-                <Option value="60000">$60,000</Option>
-                <Option value="70000">$70,000</Option>
-                <Option value="80000">$80,000</Option>
-                <Option value="90000">$90,000</Option>
-                <Option value="100000">$100,000</Option>
-                </Select>
+
+<Button size="large" name="desired_coverage" defaultValue="5000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$5,000</Button>
+<Button size="large" name="desired_coverage" defaultValue="10000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$10,000</Button>
+<Button size="large" name="desired_coverage" defaultValue="15000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$15,000</Button>
+<Button size="large" name="desired_coverage" defaultValue="20000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$20,000</Button>
+<Button size="large" name="desired_coverage" defaultValue="30000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$30,000</Button>
+<Button size="large" name="desired_coverage" defaultValue= "40000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$40,000</Button>
+<Button size="large" name="desired_coverage" defaultValue="50000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$50,000</Button>
+<Button size="large" name="desired_coverage" defaultValue="60000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$60,000</Button>
+<Button size="large" name="desired_coverage" defaultValue="70000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$70,000</Button>
+<Button size="large" name="desired_coverage" defaultValue="80000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$80,000</Button>
+<Button size="large" name="desired_coverage" defaultValue="90000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$90,000</Button>
+<Button size="large" name="desired_coverage" defaultValue="100000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$100,000</Button>
+
               </Form.Item>
             
               {/* <Link to="/step2">  */}
               <Form.Item>
         
                
-                <Button type="primary" htmlType="submit" block size="large" 
+                {/* <Button type="primary" htmlType="submit" block size="large" 
                 
                 // onClick= {() => this.props.history.push("/step2")}
                  
@@ -88,7 +88,7 @@ class DesiredCoverage extends Component {
             
                 
                Next  
-                </Button>
+                </Button> */}
               
                
               </Form.Item>
