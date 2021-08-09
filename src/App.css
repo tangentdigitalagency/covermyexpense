@@ -20,6 +20,8 @@ a {
 	color: white;
 	border-radius: 10px;
 
+
+	
 }
 
 .numInput {
@@ -29,12 +31,32 @@ a {
 }
 
 .logo {
-	width: 250px;
+	width: 150px;
 }
+
 
 .blogo{
 	width: 50%;
 }
+
+
+
+@media (min-width: 576px) {  
+	.blogo{
+		width: 100%;
+	}
+}
+@media (min-width: 768px) { 
+	.blogo{
+		width: 100%;
+	}
+ }
+@media (min-width: 992px) { 
+	.blogo{
+		width: 50%;
+	}
+ }
+
 
 .right-number {
 
@@ -96,7 +118,7 @@ option:hover {
 	}
 
 	.logo {
-		width: 150px;
+		width: 100px;
 	}
 }
 @media (min-width: 768px) { 
@@ -104,7 +126,7 @@ option:hover {
 		width: 100%;
 	}
 	.logo {
-		width: 150px;
+		width: 95px;
 	}
  }
 @media (min-width: 992px) { 

@@ -145,7 +145,6 @@ class App extends Component {
 							className='logo'
 														alt=''
 						/>
-						<b className='nav-item'>Speak To An Agent</b> 
 						<ul className='nav nav-fill'>
 							<li className='nav-item'>
 								<Button
@@ -317,7 +316,7 @@ class App extends Component {
 
 				
 
-				<Grid container xs={12} align='center' style={{ justifyContent: 'center', paddingTop: '100px'}}>
+				<Grid container xs={12} align='center' style={{ justifyContent: 'center', paddingTop: '15px'}}>
 					<Grid container xs={8} style={{ justifyContent: 'center' }}>
 						<Grid item xs={12}>
 							<Typography style={{ fontWeight: 700, lineHeight: 1.5, paddingBottom: '25px',}}>Providers Include:</Typography>

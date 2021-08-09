@@ -12,10 +12,32 @@
 }
 
 .logosTop {
-    width: 100%
-    ;
-    display: block;
+    width: 100%;
+    /* display: block; */
 
+}
+
+@media screen and (max-width: 767px) {   
+    .logosTop{
+    	background-image: url('./Assets/down.png');
+    } 
+}
+
+@media screen and (min-width: 768px) {      
+    .logosTop{      
+    	background-image: url('./Assets/down.png');
+    } 
+} 
+@media (min-width: 992px) {      
+    .logosTop{        
+          background-image: url('./Assets/all.png');
+      } 
+}
+@media (min-width: 1200px) {    
+    .logosTop{         
+         background-image: url('./Assets/all.png');
+
+     } 
 }
 
 .h3 {

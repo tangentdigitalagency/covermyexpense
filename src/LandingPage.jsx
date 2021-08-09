@@ -94,7 +94,11 @@ function LandingPage(props) {
 								</Col>
 							</Row>
 							<div className='section-two-img-container'>
-							<img src={all} alt='logo1' className=' logosTop' />
+							{/* <img src={all} alt='logo1' className=' logosTop' /> */}
+
+							<div className="logosTop"> 
+													
+							</div>
 
 							
 							</div>
