@@ -13,32 +13,24 @@
 
 .logosTop {
     width: 100%;
-    /* display: block; */
+    display: block;
 
 }
-
-@media screen and (max-width: 767px) {   
-    .logosTop{
-    	background-image: url('./Assets/down.png');
-    } 
+@media (min-width: 576px) {  
+	.logosTop{
+		width: 100%;
+	}
 }
-
-@media screen and (min-width: 768px) {      
-    .logosTop{      
-    	background-image: url('./Assets/down.png');
-    } 
-} 
-@media (min-width: 992px) {      
-    .logosTop{        
-          background-image: url('./Assets/all.png');
-      } 
-}
-@media (min-width: 1200px) {    
-    .logosTop{         
-         background-image: url('./Assets/all.png');
-
-     } 
-}
+@media (min-width: 768px) { 
+	.logosTop{
+		width: 100%;
+	}
+ }
+@media (min-width: 992px) { 
+	.logosTop{
+		width: 50%;
+	}
+ }
 
 .h3 {
     font-size: small;
