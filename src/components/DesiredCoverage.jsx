@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Form, Button, Input, Progress, Select} from "antd";
+import {Form, Button, Input, Progress, Select, Row, Col} from "antd";
 import CommonComponents from "./CommonComponents"; 
 import {Link} from "react-router-dom"; 
 import {Redirect} from "react-router-dom"; 
@@ -61,18 +61,46 @@ class DesiredCoverage extends Component {
                 ]}
               >
 
-<Button size="large" name="desired_coverage" defaultValue="5000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$5,000</Button>
-<Button size="large" name="desired_coverage" defaultValue="10000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$10,000</Button>
-<Button size="large" name="desired_coverage" defaultValue="15000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$15,000</Button>
-<Button size="large" name="desired_coverage" defaultValue="20000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$20,000</Button>
-<Button size="large" name="desired_coverage" defaultValue="30000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$30,000</Button>
-<Button size="large" name="desired_coverage" defaultValue= "40000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$40,000</Button>
-<Button size="large" name="desired_coverage" defaultValue="50000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$50,000</Button>
-<Button size="large" name="desired_coverage" defaultValue="60000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$60,000</Button>
-<Button size="large" name="desired_coverage" defaultValue="70000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$70,000</Button>
-<Button size="large" name="desired_coverage" defaultValue="80000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$80,000</Button>
-<Button size="large" name="desired_coverage" defaultValue="90000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$90,000</Button>
-<Button size="large" name="desired_coverage" defaultValue="100000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$100,000</Button>
+                <Row> 
+                  <Col xs={12} sm={12} md={12} lg={8} xl={8}>
+                  <Button size="large" name="desired_coverage" defaultValue="5000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$5,000</Button>
+                  </Col>
+                  <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
+                  <Button size="large" name="desired_coverage" defaultValue="10000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$10,000</Button>
+                  </Col>
+                  <Col xs={12} sm={12} md={12} lg={8} xl={8}>
+                  <Button size="large" name="desired_coverage" defaultValue="15000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$15,000</Button>
+                  </Col>
+                  <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
+                  <Button size="large" name="desired_coverage" defaultValue="20000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$20,000</Button>
+                  </Col>
+                  <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
+                  <Button size="large" name="desired_coverage" defaultValue="30000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$30,000</Button>
+                  </Col>
+                  <Col xs={12} sm={12} md={12} lg={8} xl={8}>
+                  <Button size="large" name="desired_coverage" defaultValue= "40000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$40,000</Button>
+                  </Col>
+                  <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
+                  <Button size="large" name="desired_coverage" defaultValue="50000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$50,000</Button>
+                  </Col>
+                  <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
+                  <Button size="large" name="desired_coverage" defaultValue="60000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$60,000</Button>
+                  </Col>
+                  <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
+                  <Button size="large" name="desired_coverage" defaultValue="70000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$70,000</Button>
+                  </Col>
+                  <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
+                  <Button size="large" name="desired_coverage" defaultValue="80000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$80,000</Button>
+                  </Col>
+                  <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
+                  <Button size="large" name="desired_coverage" defaultValue="90000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$90,000</Button>
+                  </Col>
+                  <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
+                  <Button size="large" name="desired_coverage" defaultValue="100000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$100,000</Button>
+
+                  </Col>
+                </Row>
+
 
               </Form.Item>
             

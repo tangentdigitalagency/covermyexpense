@@ -8,7 +8,7 @@ import Grid from '@material-ui/core/Grid';
 // @ts-ignore
 import Logo from './Assets/cme.png';
 // @ts-ignore
-import { Button, Typography, Progress } from 'antd';
+import { Button, Typography, Progress, Row, Col } from 'antd';
 import { PhoneOutlined } from '@ant-design/icons';
 import tran from './Assets/tran.png'
 
@@ -20,6 +20,12 @@ import Living from './components/living';
 import Info from './components/info';
 import ThankYou from './components/final.jsx';
 import LandingPage from './LandingPage';
+
+import ethos from './Assets/ethos.png';
+import ladder from './Assets/ladder.svg';
+import prud from './Assets/prudential.png';
+import heroImg from './Assets/couple.png';
+import aig from './Assets/aig.png';
 
 class App extends Component {
 	state = {
@@ -320,8 +326,25 @@ class App extends Component {
 					<Grid container xs={8} style={{ justifyContent: 'center' }}>
 						<Grid item xs={12}>
 							<Typography style={{ fontWeight: 700, lineHeight: 1.5, paddingBottom: '25px',}}>Providers Include:</Typography>
-							<img src={tran} alt='logo1' className=' blogo' />
+							<div className='section-two-imgs '>
+							<Row gutter={16}>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6} className="column">
+									<img src={ethos} className="logoSize" />
+								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={ladder} className="logoSize"/>
+								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={prud} className="logoSize" />
+								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={aig} className="logoSize aig"/>
+								</Col>
 
+							</Row>
+
+							
+							</div>
 						</Grid>
 
 					</Grid>

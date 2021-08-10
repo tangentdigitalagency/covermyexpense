@@ -2,12 +2,11 @@ import { Button, Card, Col, Collapse, Layout, Row, Typography, Form,  Input } fr
 import Grid from '@material-ui/core/Grid';
 
 import logo from './Assets/cme.png';
-// import ehthos from './Assets/ethos.png';
-// import ladder from './Assets/ladder.svg';
-// import tamer from './Assets/tamerica.png';
-// import prud from './Assets/prudential.png';
+import ethos from './Assets/ethos.png';
+import ladder from './Assets/ladder.svg';
+import prud from './Assets/prudential.png';
 import heroImg from './Assets/couple.png';
-// import aig from './Assets/aig.png';
+import aig from './Assets/aig.png';
 import all from './Assets/all.png'; 
 
 import connectImg from './Assets/img/connection.png';
@@ -85,7 +84,7 @@ function LandingPage(props) {
 					</section>
 					<section className='section-two'>
 						<div className='section-two-container'>
-							<Row>
+							<Row gutter={16}>
 								<Col span={24}>
 									<p className='cl01_title'>
 										We are partnered with top rated companies
@@ -93,8 +92,22 @@ function LandingPage(props) {
 									</p>
 								</Col>
 							</Row>
-							<div className='section-two-img-container'>
-							<img src={all} alt='logo1' className=' logosTop' />
+							<div className='section-two-imgs '>
+							<Row gutter={16}>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6} className="column">
+									<img src={ethos} className="logoSize" />
+								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={ladder} className="logoSize"/>
+								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={prud} className="logoSize" />
+								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={aig} className="logoSize aig"/>
+								</Col>
+
+							</Row>
 
 							
 							</div>
@@ -234,21 +247,25 @@ function LandingPage(props) {
 					</section>
 
 					<section className='trusted-companies pt-4'>
-						<div className='container'>
-							<Row className='py-5'>
-								<Col span={24}>
-									<h3 className='mx-auto text-center'>
-										Trusted by some of leading <br />
-										companies in the world
-									</h3>
+					<div className='section-two-imgs '>
+							<Row gutter={16}>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6} className="column">
+									<img src={ethos} className="logoSize" />
 								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={ladder} className="logoSize"/>
+								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={prud} className="logoSize" />
+								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={aig} className="logoSize aig"/>
+								</Col>
+
 							</Row>
 
-							<img src={all} alt='logo1' className=' logosTop' />
-
-							<Row>			
-							</Row>
-						</div>
+							
+							</div>
 					</section>
 				</Content>
 				<Footer className='footer'>
