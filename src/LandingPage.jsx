@@ -2,11 +2,14 @@ import { Button, Card, Col, Collapse, Layout, Row, Typography, Form,  Input } fr
 import Grid from '@material-ui/core/Grid';
 
 import logo from './Assets/cme.png';
-import ethos from './Assets/ethos.png';
-import ladder from './Assets/ladder.svg';
-import prud from './Assets/prudential.png';
+import aet from './Assets/aet.png';
+import humana from './Assets/humana.png';
+import kra from './Assets/kra.png';
+import uhs from './Assets/uhs.png';
+import { PhoneOutlined } from '@ant-design/icons';
+
 import heroImg from './Assets/couple.png';
-import aig from './Assets/aig.png';
+// import aig from './Assets/aig.png';
 import all from './Assets/all.png'; 
 
 import connectImg from './Assets/img/connection.png';
@@ -21,12 +24,15 @@ import { ArrowRightOutlined, CheckOutlined, PlusOutlined } from '@ant-design/ico
 import Meta from 'antd/es/card/Meta';
 import './LandingPage.css';
 import { useHistory } from 'react-router-dom';
+import {Link} from "react-router-dom"; 
+
 import React from 'react';
 
 function LandingPage(props) {
 	const history = useHistory();
 	const { Header, Footer, Content } = Layout;
 	const { Panel } = Collapse;
+
 	console.log(props);
 	return (
 		<div className='landing-page'>
@@ -39,234 +45,114 @@ function LandingPage(props) {
 							</a>
 						</Col>
 						<Col xs={{ span: 24 }} lg={{ span: 12 }} className='text-right'>
-							<strong>Call For Free Quote</strong>
+						<Button
+									type='primary'
+									size='middle'
+									icon={
+										<PhoneOutlined
+											// @ts-ignore
+											rotate='90'
+										/>
+									}
+									href={'tel:+18885671448'}>
+									888-567-1448
+								</Button>
 						</Col>
 					</Row>
 				</Header>
 				<Content>
-					<section className='section-one'>
-						<Row>
-							<Col span={24}>
-								<div className='container-1'>
-									<div className='block-left-hero'>
-										<Row>
-											<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-												<h1 className='hero_heading'>Burial Insurance At An Affordable Price
-</h1>
-												<p className='text-white para-white'>
-												Here at Covermyexpense.com we are committed to providing all the information needed so you are confident to make an informed decision regarding your burial insurance policy. We work with multiple providers to make sure that you receive the right final expense insurance quotes for your needs and budget. If you ever have any questions, please do not hesitate to contact us. We’re here to help you and the whole family.
+				<Content>
+                        <div className="container3 ">
+                            
+                        <div className="inputField">
+                        <div className='text'>
+                                <h1 className='lPHeading text-center'>
+                                Burial Insurance At An Affordable Price
 
+                                </h1>
 
+                              
+                            </div>
+                            <div className="input">
 
-												</p>
 						
-												<Button
-													onClick={() => {
-														props.changeRoute();
-														history.push('/step1');
-													}}
-													type='block '
-													size='large'
-													className='btn-large text-blue'>
-													Start Your Free Quote <ArrowRightOutlined />
-												</Button>
-											</Col>
-											<Col xs={{ span: 24 }} lg={{ span: 11, offset: 1 }}>
-												<div className='block-right-hero'>
-													<img src={heroImg} alt='heroImage' className='image-109' sizes='(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 1279px) 45vw, 570px' />
-												</div>
-											</Col>
-										</Row>
-									</div>
-								</div>
-							</Col>
-						</Row>
-					</section>
+                            <Input className="inputArea" autoFocus={true} placeholder="Enter Your Zipcode" required={true} maxLength={5}  type="number"  onKeyPress="if(this.value.length==5) return false;"  />                           
+
+
+					<Link to={"/step2"}>
+                            <Button  className="button" >
+                                Get My Free Quote
+                            </Button>
+							</Link>
+						
+                            </div>
+                        </div>
+                        </div>
+                    </Content>
 					<section className='section-two'>
 						<div className='section-two-container'>
-							<Row gutter={16}>
+							<Row>
 								<Col span={24}>
 									<p className='cl01_title'>
-										We are partnered with top rated companies
+										It's Easy 1-2-3
 										<br />
 									</p>
 								</Col>
 							</Row>
-							<div className='section-two-imgs '>
+							{/* <div className='section-two-imgs '>
 							<Row gutter={16}>
 								<Col  xs={24} sm={24} md={6} lg={6} xl={6} className="column">
-									<img src={ethos} className="logoSize" />
+									<img src={aet} className="logoSize" />
 								</Col>
 								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
-									<img src={ladder} className="logoSize"/>
+									<img src={humana} className="logoSize"/>
 								</Col>
 								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
-									<img src={prud} className="logoSize" />
+									<img src={kra} className="logoSize" />
 								</Col>
 								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
-									<img src={aig} className="logoSize aig"/>
+									<img src={uhs} className="logoSize aig"/>
 								</Col>
 
 							</Row>
 
 							
-							</div>
+							</div> */}
 						</div>
 					</section>
-					<section className='container'>
-						<Row>
-							<Col span={24}>
-								<h1 className='font-weight-bold ml-md-5'>Burial insurance</h1>
-							</Col>
-						</Row>
-						<Row>
-							<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-								<p>
-								You can’t predict the future. So, it’s good to plan ahead. Our Final Expense insurance plans will help provide a foundation for your family after you’re gone.
-								</p>
-								<p>
-								Here at Covermyexpense.com we are committed to providing all the information needed so you are confident to make an informed decision regarding your burial insurance policy. We work with multiple providers to make sure that you receive the right final expense insurance quotes for your needs and budget. If you ever have any questions, please do not hesitate to contact us. We’re here to help you and the whole family.
-
-
-								</p>
-								<p>You’ll want to give strong consideration to the funding aspect of your burial arrangements. You will want to ask yourself if your current funding (insurance, savings, etc.) will be sufficient and available when that time comes? Will your present insurance be needed to settle other expenses that could include medical bills, estate taxes, etc.? Will your present insurance or savings keep pace with funeral inflation costs? If you answered no to any of these questions, then you might wish to think about additional insurance that is designed specifically for your final expenses. Burial insurance policies can be made in small amounts to help with your existing insurance or larger amounts to cover all burial and funeral costs.
-
-</p>
-								<Button
-													onClick={() => {
-														props.changeRoute();
-														history.push('/step1');
-													}}
-													type='block '
-													size='large'
-													className='btn-large text-blue'>
-													Start Your Free Quote <ArrowRightOutlined />
-												</Button>
-							</Col>
-							<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-								<div className='service-main-image business'></div>
-							</Col>
-						</Row>
-					</section>
+					
 					
 					<section className='container my-5'>
 						<Row>
-							<Col xs={{ span: 24 }} lg={{ span: 8 }}>
-								<div className='container d-flex h-100'>
-									<div className='justify-content-center align-self-center'>
-										<h1>Why Us?</h1>
-										
-										<Row className='mt-1 '>
-											<Col span={24}>
-											<Button
-													onClick={() => {
-														props.changeRoute();
-														history.push('/step1');
-													}}
-													type='block '
-													size='large'
-													className='btn-large text-blue'>
-													Start Free Quote <ArrowRightOutlined />
-												</Button>
-											</Col>
-										</Row>
-									</div>
-								</div>
-							</Col>
-							<Col xs={{ span: 24 }} lg={{ span: 16 }}>
-								<Row>
-									<Col xs={{ span: 24 }} lg={{ span: 11, offset: 1 }}>
-										<Card hoverable className='w-75 shadow-sm' cover={<img alt='example' src={budget} />}>
+							
+						<Col xs={{ span: 24 }} lg={{ span: 8 }}>
+										<Card className=' card shadow-sm' cover={<img alt='example' src={budget} />}>
 											<Meta title='Affordable Prices' description='no matter your budget we can find the policy right for you and your family.' />
 										</Card>
+
 									</Col>
-									<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-										<Card hoverable className='w-75 shadow-sm' cover={<img alt='example' src={minutes} />}>
-											<Meta title='No Waiting Period' description='Full Coverage The First Day' />
-										</Card>
-									</Col>
-								</Row>
-								<Row className='mt-3'>
-									<Col xs={{ span: 24 }} lg={{ span: 11, offset: 1 }}>
-										<Card hoverable className='w-75 shadow-sm' cover={<img alt='example' src={best} />}>
+
+									<Col xs={{ span: 24 }} lg={{ span: 8 }}>
+										<Card  className='card shadow-sm' cover={<img alt='example' src={best} />}>
 											<Meta title='No Medical Exam' description='Simple Application - Free Quote—Apply in Minutes' />
 										</Card>
 									</Col>
-									<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-										<Card hoverable className='w-75 shadow-sm' cover={<YourSvg />}>
-											<Meta title='You have options' description='Getting a quote across multiple insurance companies empowers you to know what works best for you.' />
+
+									<Col xs={{ span: 24 }} lg={{ span: 8 }}>
+										<Card  className='card shadow-sm' cover={<YourSvg/>}>
+										<Meta title='You have options' description='Getting a quote across multiple insurance companies empowers you to know what works best for you.' />
 										</Card>
 									</Col>
-								</Row>
-							</Col>
 						</Row>
+
+						<div className="sc-1wvmd16-0 eKGJdd"><div><p>Speak with a Medicare Supplement Agent</p><p className="blockPhone"><svg xmlns="http://www.w3.org/2000/svg" fill="#205bb9" viewBox="0 0 22.8 22.8" className="sc-1pqlmik-0 hRpSpx"><title>phone</title><path d="M5,1A1,1,0,0,1,6.35,1l5.74,5.74a1,1,0,0,1,0,1.41L9.56,10.66l1.93,2.1,2.09,1.93,2.54-2.53a1,1,0,0,1,1.41,0l5.74,5.74a1,1,0,0,1,0,1.39l-.73-.68-5.75-5.74-3.21,3.21-2.83-2.61L8.17,10.64l3.21-3.21L5.64,1.68ZM7.05,17.19C2.49,12.57.67,6.75,2.43,4.89S5.64,1.68,5.64,1.68L5,1h0L4.89,1,4.7,1.2,4,1.88c-.59.57-1.4,1.39-2.29,2.33A3.9,3.9,0,0,0,.77,6.94a10.05,10.05,0,0,0,.66,3.4A21.44,21.44,0,0,0,6.34,17.9h0a21.44,21.44,0,0,0,7.56,4.91,10.05,10.05,0,0,0,3.4.66A4,4,0,0,0,20,22.55c.94-.89,1.75-1.71,2.33-2.3l.68-.7.18-.19.05-.05v0h0l-.73-.68s-1.36,1.45-3.22,3.21S11.68,21.75,7.05,17.19Z" transform="translate(-0.77 -0.68)" fill="#205bb9" fillRule="evenodd" /><path d="M8.17,10.64l3.21-3.21L5.64,1.68S4.19,3,2.43,4.89s.06,7.68,4.62,12.3,10.45,6.39,12.3,4.63,3.22-3.21,3.22-3.21l-5.75-5.74-3.21,3.21-2.83-2.62Zm8.65,3.64-2.5,2.5a1,1,0,0,1-1.39,0L10.1,14.2,10,14.14l-2.6-2.83a1,1,0,0,1,0-1.38L10,7.43,5.62,3.08l-.23.23C4.82,3.87,4,4.66,3.16,5.58A2,2,0,0,0,2.77,7a8.27,8.27,0,0,0,.54,2.72,19.67,19.67,0,0,0,4.45,6.82,19.39,19.39,0,0,0,6.82,4.44,8.27,8.27,0,0,0,2.71.55,2,2,0,0,0,1.38-.39c.92-.87,1.71-1.66,2.27-2.24l.23-.23Z" transform="translate(-0.77 -0.68)" fill="#205bb9" fillRule="evenodd" /></svg>
+						
+						<a className="gtm-identifier-phone">888-567-1448</a></p></div></div>
+
 					</section>
 					
 					
-					<section className='container mt-md-5'>
-						<Row>
-							<Col span={24} className='text-center'>
-								<h1>What people say about us</h1>
-							</Col>
-						</Row>
-						<Row className='mt-md-5'>
-							{/* <Col xs={{ span: 24 }} lg={{ span: 12 }}>
-								<img
-									src={whatImg}
-									width='723'
-									sizes='(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 991px) 91vw, 723px'
-									srcSet='https://assets.website-files.com/5e2b3fe9d3ee94499c5186d1/60256fd12e4fb0836a4f1bff_Comprehensive-insurance%2520(1)-p-500.jpeg 500w, https://assets.website-files.com/5e2b3fe9d3ee94499c5186d1/60256fd12e4fb0836a4f1bff_Comprehensive-insurance%2520(1)-p-1080.jpeg 1080w, https://assets.website-files.com/5e2b3fe9d3ee94499c5186d1/60256fd12e4fb0836a4f1bff_Comprehensive-insurance%2520(1)-p-1600.jpeg 1600w, https://assets.website-files.com/5e2b3fe9d3ee94499c5186d1/60256fd12e4fb0836a4f1bff_Comprehensive-insurance%20(1).jpg 2000w'
-									alt=''
-									className='client-image-big w-100 rounded'
-								/>
-							</Col> */}
-							{/* <Col xs={{ span: 24 }} lg={{ span: 11, offset: 1 }}> */}
-								<img src={quote} alt='quote' width='21' className='quote' />
-								<p className='quote-text-v1'>
-									<em className='font-italic italic-text-4'>
-									“I have never had such a great experience getting insurance quotes than I had using Cover My Expense.  Their form is super quick and simple.  As soon as I hit submit, they matched me with a great insurance agent named Sandy.  I had all the information and quotes I had to make the decision to switch my insurance.  Thank you Cover My Expense for the great connection!" <br/>
-									</em>
-								</p>
-								
-								<Row className='mt-1'>
-									<Col span={24}>
-									<Button
-													onClick={() => {
-														props.changeRoute();
-														history.push('/step1');
-													}}
-													type='block '
-													size='large'
-													className='btn-large text-blue'>
-												Start Your Free Quote <ArrowRightOutlined />
-												</Button>
-									</Col>
-								</Row>
-							{/* </Col> */}
-						</Row>
-					</section>
-
-					<section className='trusted-companies pt-4'>
-					<div className='section-two-imgs '>
-							<Row gutter={16}>
-								<Col  xs={24} sm={24} md={6} lg={6} xl={6} className="column">
-									<img src={ethos} className="logoSize" />
-								</Col>
-								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
-									<img src={ladder} className="logoSize"/>
-								</Col>
-								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
-									<img src={prud} className="logoSize" />
-								</Col>
-								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
-									<img src={aig} className="logoSize aig"/>
-								</Col>
-
-							</Row>
-
-							
-							</div>
-					</section>
+				
 				</Content>
 				<Footer className='footer'>
 					<div className='footer-container'>
@@ -276,13 +162,13 @@ function LandingPage(props) {
 		
 						<Grid container xs={10} style={{ paddingBottom: '1rem', marginTop: '1rem' }}>
 						<Grid item lg={3} xs={12} style={{ alignSelf: 'flex-end' }}>
-							<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>2021 Cover My Expense</Typography>
+							<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>2021 US Medicare Quotes</Typography>
 							<Typography style={{fontSize: '12px', color: 'rgb(166, 166, 166)' }}>Powered By Quotehound</Typography>
 						</Grid>
 						<Grid item lg={6} xs={false} />
 						<Grid container lg={3} xs={12}>
 							
-						<Grid item lg={4} xs={12} style={{ alignSelf: 'center' }}>
+						<Grid item lg={8} xs={24} style={{ alignSelf: 'center' }}>
 								<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>
 									<a
 										href='https://www.quotehound.com/dont-sell-my-info'
@@ -292,7 +178,7 @@ function LandingPage(props) {
 									</a>
 								</Typography>
 							</Grid>
-							<Grid item lg={4} xs={12} style={{ alignSelf: 'center'}}>
+							<Grid item lg={8} xs={24} style={{ alignSelf: 'center'}}>
 								<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>
 									<a
 										href='https://quotehound.com/privacy-policy'
@@ -302,7 +188,7 @@ function LandingPage(props) {
 									</a>
 								</Typography>
 							</Grid>
-							<Grid item lg={4} xs={12} style={{ alignSelf: 'center'}}>
+							<Grid item lg={8} xs={24} style={{ alignSelf: 'center'}}>
 								<Typography
 									style={{
 										fontSize: '15px',

@@ -11,31 +11,187 @@
 
 }
 
-.logoSize {
-    max-width: 150px;
-    align: center;
+.eKGJdd {
+    color: rgb(79, 71, 71);
+    display: block;
+    text-align: center;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+.eKGJdd p {
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-left: 0.8rem;
+}
+.eKGJdd svg {
+    display: inline-block;
+    margin-bottom: -0.25rem;
+    margin-right: 0.3125rem;
+    max-width: 1em;
+}
+
+.blockPhone {
+    width: 100%;
+    display: block;
+}
+
+.card {
+    margin: 10px;
+    min-height: 350px;
+}
+
+
+.iIpwqV a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.container3 {
+	background: url('./Assets/hands.png');
+	background-size:cover;
+    background-position: center top;
+	background-repeat: no-repeat;
+    min-height: 80vh;	
+    position: relative;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    max-width: 100%;
+
+}
+.text {
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    max-width: 80%;
+    text-align: center;
+}
+.lPHeading {
+    color: black;
+    font-size: 32px;
+}
+
+.pText {
+    color: black;
+    font-size: 18px;
+}
+
+.inputField {
+
+    display: flexbox;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: auto;	
+    padding: 10px;
+        max-width: 50%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow:  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    background-color: rgba(255,255,255, 0.7);
+}
+
+.input {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    /* margin: 0 auto; */
+    text-align: center;
+    
+}
+
+.inputArea {
+    height: 50px;
+    width: 80%;
+    border-color: #488BFF;
+    border-radius: 5px;
+
+}
+
+.button {
+    height: 50px;
+    background-color: #488BFF;
+    color: white;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+
+
+
+
+@media screen and (max-width: 632px){
+
+    .lPHeading {
+        font-size: 19px;
+    }
+
+    .pText {
+        font-size: 14px;
+    }
+    .container3 {
+        background: url('./Assets/couple.png');
+	background-size:cover;
+    background-position: center top;
+	background-repeat: no-repeat;
+    min-height: 80vh;	
+    position: relative;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    
+    }
+
+    .text {
+        padding: 0;
+        margin: 0;
+
+    }
+
+
+    
+    .inputField {
+    
+        display:inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        max-width: 800px;
+        border-radius: 10px;
+        box-shadow:  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+    }
+    
 }
 
 .logosTop {
-    width: 100%;
+    width: 100%
+    ;
     display: block;
 
 }
-@media (min-width: 576px) {  
-	.logosTop{
-		width: 100%;
-	}
-}
-@media (min-width: 768px) { 
-	.logosTop{
-		width: 100%;
-	}
- }
-@media (min-width: 992px) { 
-	.logosTop{
-		width: 50%;
-	}
- }
 
 .h3 {
     font-size: small;
@@ -46,7 +202,7 @@
     height: 800px;
     position: relative;
     display: flex;
-    min-height: 100vh;
+    min-height: 60vh;
     margin: auto;
     padding: 75px 5% 0;
     -webkit-box-pack: justify;
@@ -176,17 +332,28 @@
     text-align: left;
 }
 
-
-
 .landing-page .div-block-58 {
     padding-top: 35px;
 }
 
 .landing-page .section-two {
-    /* padding: 25px 5%; */
-    display: block;
-    margin-left: auto;
+    padding: 25px 5%;
+    margin: 50px;
+}
+
+.landing-page .section-two-imgs {
+    margin: 0 auto;
+}
+
+.logoSize {
+    max-width: 150px;
+    align: center;
+}
+
+.landing-page .section-two-container {
+    max-width: 1140px;
     margin-right: auto;
+    margin-left: auto;
 }
 
 .column {
@@ -194,28 +361,27 @@
 
 }
 
-@media (max-width: 984px) and (min-width:766px ) {
 
-    section.section-two {
-    margin-top: 100px;
-    }
+.logosTop {
+    width: 100%;
+    display: block;
+
 }
-
-@media (max-width: 766px) and (min-width: 590px) {
-
-    section.section-two{
-        margin-top: 70px;
-    }
-    
+@media (min-width: 576px) {  
+	.logosTop{
+		width: 100%;
+	}
 }
-
-.landing-page .section-two-container {
-    max-width: 1140px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: auto;
-}
+@media (min-width: 768px) { 
+	.logosTop{
+		width: 100%;
+	}
+ }
+@media (min-width: 992px) { 
+	.logosTop{
+		width: 50%;
+	}
+ }
 
 .landing-page .cl01_title {
     max-width: 500px;
@@ -229,9 +395,14 @@
     letter-spacing: 1px;
 }
 
+.landing-page .section-two-img-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
 
 .landing-page .section-two-imgs {
-    margin: 0 auto;
+    padding: 2rem 1rem;
 }
 
 .landing-page .ml-1 {
@@ -296,8 +467,6 @@
 
 .landing-page .trusted-companies {
     background-color: white;
-    max-width: 1440px;
-    margin: auto;
 }
 
 .landing-page .custom-rounded {
