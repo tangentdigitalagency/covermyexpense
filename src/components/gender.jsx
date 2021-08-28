@@ -12,10 +12,18 @@ class Gender extends Component {
 
 	
 	onFinish = (values) => {
-		this.props.chooseGender(values.gender)		
-		console.log('Success:', values);
-		this.props.history.push('/step3');
+		// this.props.chooseGender(values.gender)		
+		// console.log('Success:', values);
+		// this.props.history.push('/step3');
 		// this.props.nextStep();
+
+    var gen = values.target.dataset.value;
+
+    console.log(values.target.dataset.value);
+
+    this.props.chooseGender(values.target.dataset.value);
+
+    this.props.history.push("/step3")
 	};
 
 	onFinishFailed = (errorInfo) => {
@@ -59,9 +67,10 @@ class Gender extends Component {
                   }
                 ]}
               >
-                 <Button size="large" name="are_you_over_or_under_65_years_of_age" defaultValue="Yes" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step3")}>Male</Button>
+                 <Button size="large" name="gender" className="chooseButton" id="male" data-value="male" value={"male"} onClick={(values) => this.onFinish(values)}>Male</Button>
 
-<Button size="large" name="are_you_over_or_under_65_years_of_age" defaultValue="No" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step3")}>Female</Button>
+                 <Button size="large" name="gender" className="chooseButton" id="female" data-value="female" value={"female"} onClick={(values) => this.onFinish(values)}>Female</Button>
+
               </Form.Item>
             
               {/* <Link to="/step2">  */}

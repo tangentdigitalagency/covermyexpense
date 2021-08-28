@@ -79,7 +79,7 @@ function LandingPage(props) {
                             <Input className="inputArea" autoFocus={true} placeholder="Enter Your Zipcode" required={true} maxLength={5}  type="number"  onKeyPress="if(this.value.length==5) return false;"  />                           
 
 
-					<Link to={"/step2"}>
+					<Link to={"/step1"}>
                             <Button  className="button" >
                                 Get My Free Quote
                             </Button>

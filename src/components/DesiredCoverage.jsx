@@ -10,8 +10,16 @@ class DesiredCoverage extends Component {
  
   onFinish = (values) => {
     // this.props.nextStep();
-    this.props.setDesiredCoverage(values.desired_coverage);
-    console.log("Success:", values);
+    // this.props.setDesiredCoverage(values.desired_coverage);
+    // console.log("Success:", values);
+    // this.props.history.push("/step2")
+
+    var dc = values.target.dataset.value;
+
+    console.log(values.target.value);
+
+    this.props.setDesiredCoverage(values.target.dataset.value);
+
     this.props.history.push("/step2")
   };
 
@@ -62,41 +70,42 @@ class DesiredCoverage extends Component {
               >
 
                 <Row> 
+
                   <Col xs={12} sm={12} md={12} lg={8} xl={8}>
-                  <Button size="large" name="desired_coverage" defaultValue="5000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$5,000</Button>
+                  <Button size="large" name="desired_coverage"  className="chooseButton"  id="5000" data-value="5000" value={"5000"} onClick={(values) => this.onFinish(values) }>$5,000</Button>
                   </Col>
                   <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
-                  <Button size="large" name="desired_coverage" defaultValue="10000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$10,000</Button>
-                  </Col>
-                  <Col xs={12} sm={12} md={12} lg={8} xl={8}>
-                  <Button size="large" name="desired_coverage" defaultValue="15000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$15,000</Button>
-                  </Col>
-                  <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
-                  <Button size="large" name="desired_coverage" defaultValue="20000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$20,000</Button>
-                  </Col>
-                  <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
-                  <Button size="large" name="desired_coverage" defaultValue="30000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$30,000</Button>
+                  <Button size="large" name="desired_coverage"  className="chooseButton"  id="10000" data-value="10000" value={"10000"} onClick={(values) => this.onFinish(values) }>$10,000</Button>
                   </Col>
                   <Col xs={12} sm={12} md={12} lg={8} xl={8}>
-                  <Button size="large" name="desired_coverage" defaultValue= "40000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$40,000</Button>
+                  <Button size="large" name="desired_coverage"  className="chooseButton"  id="15000" data-value="15000" value={"15000"} onClick={(values) => this.onFinish(values) }>$15,000</Button>
                   </Col>
                   <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
-                  <Button size="large" name="desired_coverage" defaultValue="50000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$50,000</Button>
+                  <Button size="large" name="desired_coverage"  className="chooseButton"  id="20000" data-value="20000" value={"20000"} onClick={(values) => this.onFinish(values) }>$20,000</Button>
                   </Col>
                   <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
-                  <Button size="large" name="desired_coverage" defaultValue="60000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$60,000</Button>
+                  <Button size="large" name="desired_coverage"  className="chooseButton"  id="30000" data-value="30000" value={"30000"} onClick={(values) => this.onFinish(values) }>$30,000</Button>
+                  </Col>
+                  <Col xs={12} sm={12} md={12} lg={8} xl={8}>
+                  <Button size="large" name="desired_coverage"  className="chooseButton"  id="40000" data-value="40000" value={"40000"} onClick={(values) => this.onFinish(values) }>$40,000</Button>
                   </Col>
                   <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
-                  <Button size="large" name="desired_coverage" defaultValue="70000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$70,000</Button>
+                  <Button size="large" name="desired_coverage"  className="chooseButton"  id="50000" data-value="50000" value={"50000"} onClick={(values) => this.onFinish(values) }>$50,000</Button>
                   </Col>
                   <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
-                  <Button size="large" name="desired_coverage" defaultValue="80000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$80,000</Button>
+                  <Button size="large" name="desired_coverage"  className="chooseButton"  id="60000" data-value="60000" value={"60000"} onClick={(values) => this.onFinish(values) }>$60,000</Button>
                   </Col>
                   <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
-                  <Button size="large" name="desired_coverage" defaultValue="90000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$90,000</Button>
+                  <Button size="large" name="desired_coverage"  className="chooseButton"  id="70000" data-value="70000" value={"70000"} onClick={(values) => this.onFinish(values) }>$70,000</Button>
                   </Col>
                   <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
-                  <Button size="large" name="desired_coverage" defaultValue="100000" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>$100,000</Button>
+                  <Button size="large" name="desired_coverage"  className="chooseButton"  id="80000" data-value="80000" value={"80000"} onClick={(values) => this.onFinish(values) }>$80,000</Button>
+                  </Col>
+                  <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
+                  <Button size="large" name="desired_coverage"  className="chooseButton"  id="90000" data-value="90000" value={"90000"} onClick={(values) => this.onFinish(values) }>$90,000</Button>
+                  </Col>
+                  <Col  xs={12} sm={12} md={12} lg={8} xl={8}>
+                  <Button size="large" name="desired_coverage"  className="chooseButton"  id="100000" data-value="100000" value={"100000"} onClick={(values) => this.onFinish(values) }>$100,000</Button>
 
                   </Col>
                 </Row>
