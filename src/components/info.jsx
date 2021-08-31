@@ -41,6 +41,8 @@ class Info extends Component {
     .then((res) => {
       console.log(res)
 
+      console.log("Successfully posted, : ", postData)
+
       if (res.status === 200) {
         this.setState({
           loading: false, 
