@@ -37,7 +37,7 @@ class Gender extends Component {
       }
     }
 
-    window.dataLayer(tagManager)
+    window.datalayer(tagManager)
   }
 
 
