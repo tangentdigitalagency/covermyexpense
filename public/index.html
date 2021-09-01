@@ -70,6 +70,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
+  window.dataLayer.push({
+	  'event': 'virtualPageView',
+	  'pageUrl': window.location.pathname,
+  })
  
 
   gtag('config', 'UA-144726423-11');
@@ -143,6 +147,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
 
 	<div class="g3cm_holder" data-module="undefined" data-showoninit="true" data-destination="undefined" data-conversionid="undefined" id="g3cm_holder_kqMa" data-container="kqMa"></div>
+
 	 
 
 </body>

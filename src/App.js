@@ -106,22 +106,6 @@ class App extends Component {
 //MediaAlphaExchange__load('mediaalpha_placeholder');
 		return this.state.postData2;
 	};
-	// componentDidMount() {
-	// 	if (this.state.first_name === '' || this.state.last_name === '') {
-	// 		this.props.history.push('/calculate');
-	// 	}
-	// 	if (window.location.pathname !== '/') {
-	// 		this.setState({ route: '' });
-	// 	}
-	// 	console.log(this.state);
-	// 	window.addEventListener('popstate', (event) => {
-	// 		console.log(event);
-	// 		if (window.location.pathname === '/') {
-	// 			this.props.history.push('/');
-	// 			this.setState({ route: '/' });
-	// 		}
-	// 	});
-	// }
 
 
 
@@ -129,7 +113,9 @@ class App extends Component {
 		this.setState({
 			route: '',
 		});
+		
 	};
+
 
 	render() {
 		// console.log(this.props);
@@ -187,6 +173,8 @@ class App extends Component {
 												},
 											});
 										}}
+
+						
 									/>
 								</Route>
 
@@ -230,7 +218,7 @@ class App extends Component {
 													address: v,
 												},
 											});
-										}}
+										}}							
 										setCity={(v) => {
 											this.setState({
 												postData: {

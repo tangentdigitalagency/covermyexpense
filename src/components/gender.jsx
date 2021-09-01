@@ -7,15 +7,12 @@ const {Option} = Select;
 
 
 class Gender extends Component {
+
+
 	formRef = React.createRef();
 	state = {};
 
-	
 	onFinish = (values) => {
-		// this.props.chooseGender(values.gender)		
-		// console.log('Success:', values);
-		// this.props.history.push('/step3');
-		// this.props.nextStep();
 
     var gen = values.target.dataset.value;
 
