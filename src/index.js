@@ -5,10 +5,28 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
 
+
+
+
 ReactDOM.render(
+
+	
 	<Router>
 		<App />
 	</Router>,
+
+const tagManagerArgs = {
+	gtmId: 'GTM-5K4NGR8'
+
+	dataLayer: {
+		event: 'virtualPageview',
+		pageUrl: location.pathname.href,
+		pageTitle: 'Title'
+	}
+}
+
+TagManager.initialize(tagManagerArgs)
+
 	document.getElementById('root'),
 );
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
+import TagManager from 'react-tag-manager'
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'antd/dist/antd.css';
@@ -28,6 +29,11 @@ import heroImg from './Assets/couple.png';
 import aig from './Assets/aig.png';
 
 class App extends Component {
+
+
+
+
+
 	state = {
 		route: '/',
 		routes: ['/step1', '/step2', '/step3', '/step4', '/step5', '/thank-you'],
@@ -118,6 +124,20 @@ class App extends Component {
 
 
 	render() {
+
+
+		const tagManagerArgs = {
+			gtmId: 'GTM-5K4NGR8',
+			dataLayer: {
+				event: 'virtualPageview',
+				pageUrl: location.pathname.href,
+				pageTitle: 'Title'
+			}
+		}
+
+		TagManager.initialize(tagManagerArgs)
+
+
 		// console.log(this.props);
 		return this.state.route === '/' && this.state.routes.indexOf(window.location.pathname) === -1 ? (
 			<Route exact path='/' render={(props) => <LandingPage changeRoute={this.changeRoute} {...props} />} />
