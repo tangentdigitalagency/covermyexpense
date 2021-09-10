@@ -27,19 +27,6 @@ class Gender extends Component {
 		console.log('Failed:', errorInfo);
 	};
 
-  componentDidMount = (){
-
-    const tagManager = {
-
-      dataLayer: {
-        
-        pageUrl: window.location.href
-      }
-    }
-
-    window.datalayer(tagManager)
-  }
-
 
 	render() {
 		return (
