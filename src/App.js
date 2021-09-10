@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
-import TagManager from 'react-tag-manager'
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'antd/dist/antd.css';
@@ -124,18 +123,6 @@ class App extends Component {
 
 
 	render() {
-
-
-		const tagManagerArgs = {
-			gtmId: 'GTM-5K4NGR8',
-			dataLayer: {
-				event: 'virtualPageview',
-				pageUrl: location.pathname.href,
-				pageTitle: 'Title'
-			}
-		}
-
-		TagManager.initialize(tagManagerArgs)
 
 
 		// console.log(this.props);
