@@ -331,31 +331,7 @@ class App extends Component {
 				
 
 				<Grid container xs={12} align='center' style={{ justifyContent: 'center', paddingTop: '15px'}}>
-					<Grid container xs={8} style={{ justifyContent: 'center' }}>
-						<Grid item xs={12}>
-							<Typography style={{ fontWeight: 700, lineHeight: 1.5, paddingBottom: '25px',}}>Providers Include:</Typography>
-							<div className='section-two-imgs '>
-							<Row gutter={16}>
-								<Col  xs={24} sm={24} md={6} lg={6} xl={6} className="column">
-									<img src={ethos} className="logoSize" />
-								</Col>
-								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
-									<img src={ladder} className="logoSize"/>
-								</Col>
-								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
-									<img src={prud} className="logoSize" />
-								</Col>
-								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
-									<img src={aig} className="logoSize aig"/>
-								</Col>
-
-							</Row>
-
-							
-							</div>
-						</Grid>
-
-					</Grid>
+					
 					<Grid container xs={10} style={{ paddingBottom: '1rem', marginTop: '1rem' }}>
 						<Grid item lg={3} xs={12} style={{ alignSelf: 'flex-end' }}>
 							<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>2021 Cover My Expense</Typography>

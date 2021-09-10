@@ -144,7 +144,7 @@ function LandingPage(props) {
 
 									<Col xs={{ span: 24 }} lg={{ span: 8 }}>
 										<Card  className='card shadow-sm' cover={<img alt='example' src={best} />}>
-											<Meta title='No Medical Exam' description='Simple Application - Free Quote—Apply in Minutes' />
+											<Meta title='Peace Of Mind' description='Keep your mind on things that matter the most.' />
 										</Card>
 									</Col>
 
